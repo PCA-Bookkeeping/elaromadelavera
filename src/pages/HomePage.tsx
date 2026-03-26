@@ -34,7 +34,10 @@ export default function HomePage() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="gradient-gold section-padding text-center">
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <img src={heroImage} alt="Vela artesanal de La Vera" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <div className="absolute inset-0 bg-foreground/50" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 py-20">
         <div className="max-w-4xl mx-auto">
           <p className="text-accent-handwritten mb-4">Artesanía, naturaleza y territorio en cada vela</p>
           <h1 className="heading-xl text-foreground mb-6">Velas Artesanales de La Vera</h1>
