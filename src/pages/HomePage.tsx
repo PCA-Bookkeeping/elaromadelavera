@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Leaf, Flower2, Hand, MapPin, ChevronRight, Star } from "lucide-react";
+import heroImage from "@/assets/hero-candle.jpg";
 
 const usps = [
   { icon: Leaf, title: "Cera de Soja Natural", desc: "Sin parafina ni derivados del petróleo" },
