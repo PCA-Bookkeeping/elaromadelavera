@@ -38,21 +38,20 @@ export default function HomePage() {
         <img src={heroImage} alt="Vela artesanal de La Vera" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-foreground/50" />
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-accent-handwritten mb-4">Artesanía, naturaleza y territorio en cada vela</p>
-          <h1 className="heading-xl text-foreground mb-6">Velas Artesanales de La Vera</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+          <p className="text-accent-handwritten mb-4 text-primary-foreground">Artesanía, naturaleza y territorio en cada vela</p>
+          <h1 className="heading-xl text-primary-foreground mb-6">Velas Artesanales de La Vera</h1>
+          <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto mb-8">
             Hechas a mano con cera de soja, aceites esenciales y los aromas de nuestra tierra
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link to="/tienda" className="btn-gold inline-flex items-center justify-center gap-2">
               Descubre Nuestra Colección <ChevronRight className="h-4 w-4" />
             </Link>
-            <Link to="/b2b" className="btn-outline-warm inline-flex items-center justify-center">
+            <Link to="/b2b" className="btn-outline-warm inline-flex items-center justify-center border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20">
               Velas para Tu Negocio
             </Link>
           </div>
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-primary-foreground/80">
             <span>🌱 100% Natural</span>
             <span>🤲 Hecho a Mano</span>
             <span>📍 Jarandilla de la Vera</span>
