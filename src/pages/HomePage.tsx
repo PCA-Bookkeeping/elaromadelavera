@@ -2,6 +2,14 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Leaf, Flower2, Hand, MapPin, ChevronRight, Star } from "lucide-react";
 import heroImage from "@/assets/hero-candle.jpg";
+import collectionHogar from "@/assets/collection-hogar.jpg";
+import collectionRegalo from "@/assets/collection-regalo.jpg";
+import collectionB2b from "@/assets/collection-b2b.jpg";
+import aboutWorkshop from "@/assets/about-workshop.jpg";
+import scentLavanda from "@/assets/scent-lavanda.jpg";
+import scentRomero from "@/assets/scent-romero.jpg";
+import scentAzahar from "@/assets/scent-azahar.jpg";
+import scentJara from "@/assets/scent-jara.jpg";
 
 const usps = [
   { icon: Leaf, title: "Cera de Soja Natural", desc: "Sin parafina ni derivados del petróleo" },
@@ -11,16 +19,16 @@ const usps = [
 ];
 
 const collections = [
-  { title: "Velas de Hogar", desc: "Decora tu espacio con los aromas de La Vera", link: "/tienda?collection=hogar", cta: "Ver colección" },
-  { title: "Sets de Regalo", desc: "El regalo perfecto para alguien especial", link: "/tienda?collection=regalo", cta: "Ver sets" },
-  { title: "Velas para Negocios", desc: "Personaliza velas con tu marca", link: "/b2b", cta: "Saber más" },
+  { title: "Velas de Hogar", desc: "Decora tu espacio con los aromas de La Vera", link: "/tienda?collection=hogar", cta: "Ver colección", image: collectionHogar },
+  { title: "Sets de Regalo", desc: "El regalo perfecto para alguien especial", link: "/tienda?collection=regalo", cta: "Ver sets", image: collectionRegalo },
+  { title: "Velas para Negocios", desc: "Personaliza velas con tu marca", link: "/b2b", cta: "Saber más", image: collectionB2b },
 ];
 
 const scents = [
-  { name: "Lavanda Extremeña", desc: "Cultivada en los campos de Extremadura. Floral, relajante y delicada. Perfecta para crear un ambiente de calma en tu hogar.", emoji: "🌸" },
-  { name: "Romero Silvestre", desc: "Recogido en las montañas de La Vera. Herbáceo, fresco e intenso. Energía natural en cada rincón.", emoji: "🌿" },
-  { name: "Azahar (Flor de Naranjo)", desc: "De los naranjos del Valle del Jerte y La Vera. Dulce, fresco y primaveral. Un aroma que atrapa la esencia de la primavera extremeña.", emoji: "🌼" },
-  { name: "Jara de la Sierra", desc: "La planta más característica de nuestras sierras. Resinosa, balsámica, con notas de monte mediterráneo. El olor de pasear por la sierra después de la lluvia.", emoji: "🏔️" },
+  { name: "Lavanda Extremeña", desc: "Cultivada en los campos de Extremadura. Floral, relajante y delicada. Perfecta para crear un ambiente de calma en tu hogar.", image: scentLavanda },
+  { name: "Romero Silvestre", desc: "Recogido en las montañas de La Vera. Herbáceo, fresco e intenso. Energía natural en cada rincón.", image: scentRomero },
+  { name: "Azahar (Flor de Naranjo)", desc: "De los naranjos del Valle del Jerte y La Vera. Dulce, fresco y primaveral. Un aroma que atrapa la esencia de la primavera extremeña.", image: scentAzahar },
+  { name: "Jara de la Sierra", desc: "La planta más característica de nuestras sierras. Resinosa, balsámica, con notas de monte mediterráneo. El olor de pasear por la sierra después de la lluvia.", image: scentJara },
 ];
 
 const steps = [
@@ -35,7 +43,7 @@ export default function HomePage() {
     <Layout>
       {/* Hero */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <img src={heroImage} alt="Vela artesanal de La Vera" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <img src={heroImage} alt="Vela artesanal de cera de soja hecha a mano en La Vera" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-foreground/50" />
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 py-20">
           <p className="text-accent-handwritten mb-4 text-primary-foreground">Artesanía, naturaleza y territorio en cada vela</p>
@@ -80,8 +88,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {collections.map((col) => (
               <Link key={col.title} to={col.link} className="group block">
-                <div className="aspect-[4/3] bg-muted rounded-lg mb-4 flex items-center justify-center text-muted-foreground text-sm overflow-hidden group-hover:shadow-lg transition-shadow">
-                  <span className="text-6xl opacity-30">🕯️</span>
+                <div className="aspect-[4/3] rounded-lg mb-4 overflow-hidden group-hover:shadow-lg transition-shadow">
+                  <img src={col.image} alt={col.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold mb-1 group-hover:text-primary transition-colors">{col.title}</h3>
                 <p className="text-sm text-muted-foreground mb-2">{col.desc}</p>
@@ -97,8 +105,8 @@ export default function HomePage() {
       {/* Brand Story Teaser */}
       <section className="section-padding bg-muted/50">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="aspect-[4/3] bg-muted rounded-lg flex items-center justify-center text-muted-foreground text-sm">
-            <span className="text-6xl opacity-30">🏠</span>
+          <div className="aspect-[4/3] rounded-lg overflow-hidden">
+            <img src={aboutWorkshop} alt="Taller artesanal de El Aroma de la Vera" className="w-full h-full object-cover" loading="lazy" />
           </div>
           <div>
             <h2 className="heading-lg mb-6">Nuestra Historia</h2>
@@ -120,10 +128,14 @@ export default function HomePage() {
           <h2 className="heading-lg text-center mb-12">Los Aromas de La Vera</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {scents.map((scent) => (
-              <div key={scent.name} className="text-center p-6 rounded-lg border border-border hover:shadow-md transition-shadow bg-card">
-                <span className="text-4xl mb-4 block">{scent.emoji}</span>
-                <h3 className="font-heading text-lg font-semibold mb-3">{scent.name}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{scent.desc}</p>
+              <div key={scent.name} className="text-center rounded-lg border border-border hover:shadow-md transition-shadow bg-card overflow-hidden">
+                <div className="aspect-square overflow-hidden">
+                  <img src={scent.image} alt={scent.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-heading text-lg font-semibold mb-3">{scent.name}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{scent.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -189,13 +201,13 @@ export default function HomePage() {
           <h2 className="heading-lg mb-2">Síguenos en Instagram</h2>
           <p className="text-muted-foreground mb-8">@elaromadelavera</p>
           <div className="grid grid-cols-3 md:grid-cols-6 gap-2 max-w-3xl mx-auto mb-6">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="aspect-square bg-muted rounded-md flex items-center justify-center text-2xl opacity-30">
-                🕯️
+            {[scentLavanda, scentRomero, scentAzahar, scentJara, collectionHogar, collectionRegalo].map((img, i) => (
+              <div key={i} className="aspect-square rounded-md overflow-hidden">
+                <img src={img} alt="Instagram El Aroma de la Vera" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
               </div>
             ))}
           </div>
-          <a href="#" className="text-primary font-medium inline-flex items-center gap-1 hover:gap-2 transition-all">
+          <a href="https://instagram.com/elaromadelavera" target="_blank" rel="noopener noreferrer" className="text-primary font-medium inline-flex items-center gap-1 hover:gap-2 transition-all">
             Síguenos <ChevronRight className="h-4 w-4" />
           </a>
         </div>

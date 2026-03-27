@@ -1,34 +1,38 @@
 import { Layout } from "@/components/Layout";
 import { Leaf, Eye, Users } from "lucide-react";
+import aboutLandscape from "@/assets/about-landscape.jpg";
+import aboutIngredients from "@/assets/about-ingredients.jpg";
+import aboutHandmade from "@/assets/about-handmade.jpg";
+import aboutAromas from "@/assets/about-aromas.jpg";
+
+const blocks = [
+  {
+    title: "Donde Todo Empieza",
+    text: "El Aroma de la Vera nace en Jarandilla de la Vera, un pueblo de 3.000 habitantes enclavado en la comarca de La Vera, entre las montañas de la Sierra de Gredos y los valles del norte de Cáceres. Aquí, rodeados de cerezos, naranjos, campos de lavanda, jaras y romero silvestre, decidimos crear algo que capturara la esencia de esta tierra.",
+    image: aboutLandscape,
+    imgRight: true,
+  },
+  {
+    title: "Ingredientes con Intención",
+    text: "Usamos exclusivamente cera de soja natural. Nunca parafina. Nunca cera de origen petrolero. Nuestras fragancias son aceites esenciales puros, no sintéticos. Las mechas son de algodón, y los colorantes, naturales. Cada ingrediente se selecciona por una razón: calidad, sostenibilidad y respeto por lo que ponemos en tu hogar.",
+    image: aboutIngredients,
+    imgRight: false,
+  },
+  {
+    title: "Hecho a Mano, de Verdad",
+    text: "No tenemos una línea de producción. No tenemos máquinas. Cada vela se funde en baño maría, se vierte a mano en su recipiente, y se deja enfriar de forma natural durante 24 a 48 horas. Después, cada unidad se inspecciona visualmente y cada lote pasa una prueba de quemado. Solo las velas que cumplen nuestro estándar llegan a tu puerta.",
+    image: aboutHandmade,
+    imgRight: true,
+  },
+  {
+    title: "Los Aromas de Nuestra Tierra",
+    text: "Nuestros aromas no son genéricos. Están inspirados en lo que hace única a La Vera. La lavanda silvestre de los campos de Extremadura. El romero de nuestras montañas. El azahar de los naranjos del valle. La jara que perfuma nuestras sierras después de la lluvia. Cada vela es una historia sensorial de este territorio.",
+    image: aboutAromas,
+    imgRight: false,
+  },
+];
 
 export default function AboutPage() {
-  const blocks = [
-    {
-      title: "Donde Todo Empieza",
-      text: "El Aroma de la Vera nace en Jarandilla de la Vera, un pueblo de 3.000 habitantes enclavado en la comarca de La Vera, entre las montañas de la Sierra de Gredos y los valles del norte de Cáceres. Aquí, rodeados de cerezos, naranjos, campos de lavanda, jaras y romero silvestre, decidimos crear algo que capturara la esencia de esta tierra.",
-      emoji: "🏔️",
-      imgRight: true,
-    },
-    {
-      title: "Ingredientes con Intención",
-      text: "Usamos exclusivamente cera de soja natural. Nunca parafina. Nunca cera de origen petrolero. Nuestras fragancias son aceites esenciales puros, no sintéticos. Las mechas son de algodón, y los colorantes, naturales. Cada ingrediente se selecciona por una razón: calidad, sostenibilidad y respeto por lo que ponemos en tu hogar.",
-      emoji: "🌿",
-      imgRight: false,
-    },
-    {
-      title: "Hecho a Mano, de Verdad",
-      text: "No tenemos una línea de producción. No tenemos máquinas. Cada vela se funde en baño maría, se vierte a mano en su recipiente, y se deja enfriar de forma natural durante 24 a 48 horas. Después, cada unidad se inspecciona visualmente y cada lote pasa una prueba de quemado. Solo las velas que cumplen nuestro estándar llegan a tu puerta.",
-      emoji: "🤲",
-      imgRight: true,
-    },
-    {
-      title: "Los Aromas de Nuestra Tierra",
-      text: "Nuestros aromas no son genéricos. Están inspirados en lo que hace única a La Vera. La lavanda silvestre de los campos de Extremadura. El romero de nuestras montañas. El azahar de los naranjos del valle. La jara que perfuma nuestras sierras después de la lluvia. Cada vela es una historia sensorial de este territorio.",
-      emoji: "🌸",
-      imgRight: false,
-    },
-  ];
-
   return (
     <Layout>
       {/* Hero */}
@@ -46,8 +50,8 @@ export default function AboutPage() {
                 <h2 className="heading-md mb-4">{block.title}</h2>
                 <p className="text-muted-foreground leading-relaxed">{block.text}</p>
               </div>
-              <div className={`aspect-[4/3] bg-muted rounded-lg flex items-center justify-center text-6xl opacity-30 ${block.imgRight ? '' : 'md:[direction:ltr]'}`}>
-                {block.emoji}
+              <div className={`aspect-[4/3] rounded-lg overflow-hidden ${block.imgRight ? '' : 'md:[direction:ltr]'}`}>
+                <img src={block.image} alt={block.title} className="w-full h-full object-cover" loading="lazy" />
               </div>
             </div>
           ))}
