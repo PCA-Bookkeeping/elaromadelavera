@@ -25,7 +25,7 @@ const faqSections = [
     title: "Pagos",
     items: [
       { q: "¿Qué métodos de pago aceptáis?", a: "Aceptamos tarjeta de crédito/débito (Visa, Mastercard), PayPal y Bizum. Todos los pagos se procesan de forma segura." },
-      { q: "¿Es seguro comprar en vuestra tienda?", a: "Sí. Nuestra tienda utiliza certificado SSL y cifrado de datos. Tus datos de pago nunca pasan por nuestros servidores." },
+      { q: "¿Es seguro comprar en vuestra tienda?", a: "Sí. Nuestra tienda utiliza la plataforma Shopify con certificado SSL y cifrado de datos. Tus datos de pago nunca pasan por nuestros servidores." },
     ],
   },
   {
