@@ -17,10 +17,10 @@ const collections = [
 ];
 
 const scents = [
-  { name: "Pimentón Ahumado", desc: "El aroma más icónico de nuestra comarca. Notas ahumadas, cálidas y profundas que evocan los secaderos tradicionales de La Vera.", emoji: "🌶️" },
-  { name: "Lavanda Extremeña", desc: "Cultivada en los campos de Extremadura. Floral, relajante y delicada. Perfecta para crear un ambiente de calma.", emoji: "💜" },
-  { name: "Romero Silvestre", desc: "Recogido en las montañas de La Vera. Herbáceo, fresco e intenso. Energía natural en tu hogar.", emoji: "🌿" },
-  { name: "Azahar (Flor de Naranjo)", desc: "De los naranjos del Valle del Jerte y La Vera. Dulce, fresco y primaveral.", emoji: "🌸" },
+  { name: "Lavanda Extremeña", desc: "Cultivada en los campos de Extremadura. Floral, relajante y delicada. Perfecta para crear un ambiente de calma en tu hogar.", emoji: "🌸" },
+  { name: "Romero Silvestre", desc: "Recogido en las montañas de La Vera. Herbáceo, fresco e intenso. Energía natural en cada rincón.", emoji: "🌿" },
+  { name: "Azahar (Flor de Naranjo)", desc: "De los naranjos del Valle del Jerte y La Vera. Dulce, fresco y primaveral. Un aroma que atrapa la esencia de la primavera extremeña.", emoji: "🌼" },
+  { name: "Jara de la Sierra", desc: "La planta más característica de nuestras sierras. Resinosa, balsámica, con notas de monte mediterráneo. El olor de pasear por la sierra después de la lluvia.", emoji: "🏔️" },
 ];
 
 const steps = [
