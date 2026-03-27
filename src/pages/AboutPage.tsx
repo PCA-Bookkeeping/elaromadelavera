@@ -5,7 +5,7 @@ export default function AboutPage() {
   const blocks = [
     {
       title: "Donde Todo Empieza",
-      text: "El Aroma de la Vera nace en Jarandilla de la Vera, un pueblo de 3.000 habitantes enclavado en la comarca de La Vera, entre las montañas de la Sierra de Gredos y los valles del norte de Cáceres. Aquí, rodeados de cerezos, naranjos, campos de lavanda y los secaderos de pimentón que llenan el aire con su aroma inconfundible, decidimos crear algo que capturara la esencia de esta tierra.",
+      text: "El Aroma de la Vera nace en Jarandilla de la Vera, un pueblo de 3.000 habitantes enclavado en la comarca de La Vera, entre las montañas de la Sierra de Gredos y los valles del norte de Cáceres. Aquí, rodeados de cerezos, naranjos, campos de lavanda, jaras y romero silvestre, decidimos crear algo que capturara la esencia de esta tierra.",
       emoji: "🏔️",
       imgRight: true,
     },
