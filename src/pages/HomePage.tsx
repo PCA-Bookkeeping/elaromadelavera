@@ -103,8 +103,8 @@ export default function HomePage() {
             <h2 className="heading-lg mb-6">Nuestra Historia</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
               En un pequeño taller en Jarandilla de la Vera, fundimos cada vela a mano. Usamos solo cera de soja natural,
-              aceites esenciales puros y mechas de algodón. Nuestros aromas nacen de esta tierra: el pimentón ahumado,
-              la lavanda extremeña, el romero silvestre y el azahar de nuestros naranjos.
+              aceites esenciales puros y mechas de algodón. Nuestros aromas nacen de esta tierra: la lavanda extremeña,
+              el romero silvestre, el azahar de nuestros naranjos y la jara de nuestras sierras.
             </p>
             <Link to="/sobre-nosotros" className="text-primary font-medium inline-flex items-center gap-1 hover:gap-2 transition-all">
               Conoce nuestra historia completa <ChevronRight className="h-4 w-4" />
