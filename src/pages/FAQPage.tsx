@@ -7,7 +7,7 @@ const faqSections = [
     items: [
       { q: "¿De qué están hechas vuestras velas?", a: "Nuestras velas están hechas de cera de soja 100% natural, aceites esenciales puros, mechas de algodón y colorantes naturales. No utilizamos parafina, fragancias sintéticas ni aditivos artificiales." },
       { q: "¿Cuánto dura una vela?", a: "Depende del tamaño. Una vela de 150ml dura aproximadamente 20-25 horas. Una de 250ml, 35-40 horas. Y una de 500ml, 60-70 horas. El tiempo real puede variar según las condiciones de uso." },
-      { q: "¿Qué aromas tenéis disponibles?", a: "Nuestros aromas signature están inspirados en la comarca de La Vera: Pimentón Ahumado, Lavanda Extremeña, Romero Silvestre y Azahar (Flor de Naranjo). Iremos ampliando la colección con el tiempo." },
+      { q: "¿Qué aromas tenéis disponibles?", a: "Nuestros aromas signature están inspirados en la comarca de La Vera: Lavanda Extremeña, Romero Silvestre, Azahar (Flor de Naranjo) y Jara de la Sierra. Iremos ampliando la colección con el tiempo." },
       { q: "¿Puedo reutilizar el recipiente?", a: "Sí. Una vez que la vela se haya consumido, limpia el recipiente con agua caliente para retirar los restos de cera. Nuestros recipientes de cristal y cerámica son perfectos como vasos, macetas pequeñas o portaobjetos." },
       { q: "¿Vuestras velas son veganas?", a: "Sí. Todos nuestros ingredientes son de origen vegetal. No utilizamos cera de abeja ni ningún producto de origen animal. Además, no testamos en animales." },
     ],
@@ -25,7 +25,7 @@ const faqSections = [
     title: "Pagos",
     items: [
       { q: "¿Qué métodos de pago aceptáis?", a: "Aceptamos tarjeta de crédito/débito (Visa, Mastercard), PayPal y Bizum. Todos los pagos se procesan de forma segura." },
-      { q: "¿Es seguro comprar en vuestra tienda?", a: "Sí. Nuestra tienda utiliza certificado SSL y cifrado de datos. Tus datos de pago nunca pasan por nuestros servidores." },
+      { q: "¿Es seguro comprar en vuestra tienda?", a: "Sí. Nuestra tienda utiliza la plataforma Shopify con certificado SSL y cifrado de datos. Tus datos de pago nunca pasan por nuestros servidores." },
     ],
   },
   {
