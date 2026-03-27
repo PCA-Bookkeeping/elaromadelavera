@@ -10,7 +10,7 @@ export default function PrivacyPage() {
         <div className="container mx-auto max-w-3xl space-y-8 text-muted-foreground leading-relaxed">
           <div>
             <h2 className="font-heading text-xl font-semibold mb-3 text-foreground">Responsable del tratamiento</h2>
-            <p>Fabian Andrzej Janiszewski (Empresario Individual / Autónomo)<br/>Ubicación: Jarandilla de la Vera, Cáceres, España<br/>Email de contacto: [próximamente]</p>
+            <p>Fabian Andrzej Janiszewski (Empresario Individual / Autónomo)<br/>NIF: Z4342126-F<br/>Ubicación: Jarandilla de la Vera, Cáceres, España<br/>Email de contacto: hola@elaromadelavera.com</p>
           </div>
           <div>
             <h2 className="font-heading text-xl font-semibold mb-3 text-foreground">Finalidad del tratamiento de datos</h2>

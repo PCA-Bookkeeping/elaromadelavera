@@ -10,7 +10,7 @@ export default function TermsPage() {
         <div className="container mx-auto max-w-3xl space-y-8 text-muted-foreground leading-relaxed">
           <div>
             <h2 className="font-heading text-xl font-semibold mb-3 text-foreground">Identificación del vendedor</h2>
-            <p>Fabian Andrzej Janiszewski, autónomo. Jarandilla de la Vera, Cáceres, España. NIF: [pendiente].</p>
+            <p>Fabian Andrzej Janiszewski, autónomo. Jarandilla de la Vera, Cáceres, España. NIF: Z4342126-F.</p>
           </div>
           <div>
             <h2 className="font-heading text-xl font-semibold mb-3 text-foreground">Proceso de compra</h2>

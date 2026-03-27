@@ -55,6 +55,7 @@ export default function HomePage() {
             <span>🌱 100% Natural</span>
             <span>🤲 Hecho a Mano</span>
             <span>📍 Jarandilla de la Vera</span>
+            <span>🇪🇺 Envíos a toda Europa</span>
           </div>
         </div>
       </section>

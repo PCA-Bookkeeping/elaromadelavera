@@ -26,8 +26,8 @@ export default function ContactPage() {
             </p>
             <div className="space-y-4">
               {[
-                { icon: Mail, label: "Email", value: "[próximamente]" },
-                { icon: Phone, label: "Teléfono / WhatsApp", value: "[próximamente]" },
+                { icon: Mail, label: "Email", value: "hola@elaromadelavera.com" },
+                { icon: Phone, label: "Teléfono / WhatsApp", value: "+34 656 674 297" },
                 { icon: MapPin, label: "Ubicación", value: "Jarandilla de la Vera, Cáceres, Extremadura, España" },
                 { icon: Clock, label: "Horario", value: "Lunes a Viernes, 9:00 - 18:00 (hora española)" },
               ].map((item) => (

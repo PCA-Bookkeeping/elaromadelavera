@@ -23,7 +23,7 @@ export default function AboutPage() {
     },
     {
       title: "Los Aromas de Nuestra Tierra",
-      text: "Nuestros aromas no son genéricos. Están inspirados en lo que hace única a La Vera. El pimentón ahumado de los secaderos centenarios. La lavanda silvestre de los campos de Extremadura. El romero de nuestras montañas. El azahar de los naranjos del valle. Cada vela es una historia sensorial de este territorio.",
+      text: "Nuestros aromas no son genéricos. Están inspirados en lo que hace única a La Vera. La lavanda silvestre de los campos de Extremadura. El romero de nuestras montañas. El azahar de los naranjos del valle. La jara que perfuma nuestras sierras después de la lluvia. Cada vela es una historia sensorial de este territorio.",
       emoji: "🌸",
       imgRight: false,
     },

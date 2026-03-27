@@ -136,7 +136,7 @@ export default function B2BPage() {
             <button type="submit" className="btn-primary w-full">Enviar Solicitud</button>
           </form>
           <p className="text-sm text-muted-foreground text-center mt-6">
-            Respondemos en un máximo de 48 horas. Para consultas urgentes, llámanos o escríbenos por WhatsApp.
+            Respondemos en un máximo de 48 horas. Para consultas urgentes, llámanos o escríbenos por WhatsApp al <a href="https://wa.me/34656674297" target="_blank" rel="noopener noreferrer" className="text-primary underline">+34 656 674 297</a>.
           </p>
         </div>
       </section>
