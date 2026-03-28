@@ -5,10 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import { ShoppingCart, Minus, Plus, Trash2, ExternalLink, Loader2 } from "lucide-react";
 import { useCartStore } from "@/stores/cartStore";
 import { formatPrice } from "@/lib/shopify";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const CartDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { items, isLoading, isSyncing, updateQuantity, removeItem, getCheckoutUrl, syncCart } = useCartStore();
+  const { t } = useLanguage();
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = items.reduce((sum, item) => sum + (parseFloat(item.price.amount) * item.quantity), 0);
 
@@ -39,9 +41,9 @@ export const CartDrawer = () => {
       </SheetTrigger>
       <SheetContent className="w-full sm:max-w-lg flex flex-col h-full">
         <SheetHeader className="flex-shrink-0">
-          <SheetTitle className="font-heading text-2xl">Tu Carrito</SheetTitle>
+          <SheetTitle className="font-heading text-2xl">{t('cart.title')}</SheetTitle>
           <SheetDescription>
-            {totalItems === 0 ? "Tu carrito está vacío" : `${totalItems} artículo${totalItems !== 1 ? 's' : ''} en tu carrito`}
+            {totalItems === 0 ? t('cart.empty') : `${totalItems} ${t('cart.items')}`}
           </SheetDescription>
         </SheetHeader>
 
@@ -50,19 +52,19 @@ export const CartDrawer = () => {
             <div className="flex-1 flex items-center justify-center">
               <div className="text-center">
                 <ShoppingCart className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground">Tu carrito está vacío</p>
+                <p className="text-muted-foreground">{t('cart.empty')}</p>
               </div>
             </div>
           ) : (
             <>
               {remaining > 0 && (
                 <div className="bg-gold-light rounded-md p-3 text-sm mb-4 text-center">
-                  ¡Te faltan {formatPrice(remaining.toString())} para envío gratis!
+                  {t('cart.freeShipping').replace('{amount}', formatPrice(remaining.toString()))}
                 </div>
               )}
               {remaining <= 0 && (
                 <div className="bg-sage/20 rounded-md p-3 text-sm mb-4 text-center text-primary font-medium">
-                  🎉 ¡Envío gratis incluido!
+                  {t('cart.freeShippingDone')}
                 </div>
               )}
               <div className="flex-1 overflow-y-auto pr-2 min-h-0 space-y-4">
@@ -97,12 +99,12 @@ export const CartDrawer = () => {
               </div>
               <div className="flex-shrink-0 space-y-4 pt-4 border-t mt-4">
                 <div className="flex justify-between items-center">
-                  <span className="font-heading text-lg font-semibold">Total</span>
+                  <span className="font-heading text-lg font-semibold">{t('cart.total')}</span>
                   <span className="text-xl font-bold">{formatPrice(totalPrice.toString())}</span>
                 </div>
-                <p className="text-xs text-muted-foreground">IVA incluido</p>
+                <p className="text-xs text-muted-foreground">{t('cart.vatIncluded')}</p>
                 <Button onClick={handleCheckout} className="w-full btn-gold" size="lg" disabled={isLoading || isSyncing}>
-                  {isLoading || isSyncing ? <Loader2 className="w-4 h-4 animate-spin" /> : <><ExternalLink className="w-4 h-4 mr-2" />Tramitar Pedido</>}
+                  {isLoading || isSyncing ? <Loader2 className="w-4 h-4 animate-spin" /> : <><ExternalLink className="w-4 h-4 mr-2" />{t('cart.checkout')}</>}
                 </Button>
               </div>
             </>
