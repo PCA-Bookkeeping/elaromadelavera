@@ -2,18 +2,21 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { CartDrawer } from "./CartDrawer";
-
-const navLinks = [
-  { label: "Inicio", to: "/" },
-  { label: "Tienda", to: "/tienda" },
-  { label: "Sobre Nosotros", to: "/sobre-nosotros" },
-  { label: "B2B / Negocios", to: "/b2b" },
-  { label: "Blog", to: "/blog" },
-  { label: "Contacto", to: "/contacto" },
-];
+import { LanguageSelector } from "./LanguageSelector";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { t } = useLanguage();
+
+  const navLinks = [
+    { label: t('nav.home'), to: "/" },
+    { label: t('nav.shop'), to: "/tienda" },
+    { label: t('nav.about'), to: "/sobre-nosotros" },
+    { label: t('nav.b2b'), to: "/b2b" },
+    { label: t('nav.blog'), to: "/blog" },
+    { label: t('nav.contact'), to: "/contacto" },
+  ];
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -38,11 +41,12 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <LanguageSelector />
           <CartDrawer />
           <button
             className="lg:hidden p-2"
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Menú"
+            aria-label={t('nav.menu')}
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>

@@ -5,12 +5,14 @@ import { ShopifyProduct, storefrontApiRequest, PRODUCTS_QUERY, formatPrice } fro
 import { useCartStore } from "@/stores/cartStore";
 import { ShoppingCart, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function ShopPage() {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
   const [loading, setLoading] = useState(true);
   const addItem = useCartStore(s => s.addItem);
   const isCartLoading = useCartStore(s => s.isLoading);
+  const { t } = useLanguage();
 
   useEffect(() => {
     async function load() {
@@ -34,17 +36,15 @@ export default function ShopPage() {
       quantity: 1,
       selectedOptions: variant.selectedOptions || [],
     });
-    toast.success("Añadido al carrito", { description: product.node.title });
+    toast.success(t('cart.addedToast'), { description: product.node.title });
   };
 
   return (
     <Layout>
       <section className="section-padding">
         <div className="container mx-auto">
-          <h1 className="heading-xl text-center mb-4">Nuestra Tienda</h1>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Descubre nuestra colección completa de velas artesanales, hechas a mano en Jarandilla de la Vera con cera de soja natural y aceites esenciales.
-          </p>
+          <h1 className="heading-xl text-center mb-4">{t('shop.title')}</h1>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">{t('shop.subtitle')}</p>
 
           {loading ? (
             <div className="flex justify-center py-20">
@@ -53,10 +53,8 @@ export default function ShopPage() {
           ) : products.length === 0 ? (
             <div className="text-center py-20">
               <span className="text-6xl mb-4 block">🕯️</span>
-              <h2 className="heading-md mb-2">Próximamente</h2>
-              <p className="text-muted-foreground">
-                Estamos preparando nuestras velas con mucho cariño. ¡Vuelve pronto!
-              </p>
+              <h2 className="heading-md mb-2">{t('shop.comingSoon')}</h2>
+              <p className="text-muted-foreground">{t('shop.comingSoonDesc')}</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -86,7 +84,7 @@ export default function ShopPage() {
                           disabled={isCartLoading}
                           className="btn-primary text-sm px-4 py-2 inline-flex items-center gap-2"
                         >
-                          {isCartLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <><ShoppingCart className="h-4 w-4" /> Añadir</>}
+                          {isCartLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <><ShoppingCart className="h-4 w-4" /> {t('shop.addToCart')}</>}
                         </button>
                       </div>
                     </div>
