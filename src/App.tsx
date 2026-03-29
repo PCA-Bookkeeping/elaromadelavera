@@ -20,6 +20,7 @@ import PrivacyPage from "./pages/PrivacyPage";
 import CookiesPage from "./pages/CookiesPage";
 import TermsPage from "./pages/TermsPage";
 import LegalNoticePage from "./pages/LegalNoticePage";
+import CandleCustomizerPage from "./pages/CandleCustomizerPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ function AppContent() {
       <Route path="/cookies" element={<CookiesPage />} />
       <Route path="/terminos" element={<TermsPage />} />
       <Route path="/aviso-legal" element={<LegalNoticePage />} />
+      <Route path="/personalizar" element={<CandleCustomizerPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

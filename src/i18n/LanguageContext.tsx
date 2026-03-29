@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode, useCallback, startTransition } from 'react';
 import { Language, getTranslation } from './translations';
 
 interface LanguageContextType {
@@ -9,17 +9,16 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
-function detectLanguage(): Language {
-  // Check localStorage first
-  const stored = localStorage.getItem('lang');
-  if (stored && ['es', 'en', 'pl'].includes(stored)) return stored as Language;
+const SUPPORTED: Language[] = ['es', 'en', 'pl', 'de', 'fr', 'pt', 'it', 'nl'];
 
-  // Auto-detect from browser
+function detectLanguage(): Language {
+  const stored = localStorage.getItem('lang');
+  if (stored && SUPPORTED.includes(stored as Language)) return stored as Language;
+
   const browserLang = navigator.language?.toLowerCase() || '';
-  if (browserLang.startsWith('pl')) return 'pl';
-  if (browserLang.startsWith('es')) return 'es';
-  // Default to Spanish for Spain-region, English for everything else
-  if (browserLang.startsWith('en')) return 'en';
+  for (const lang of SUPPORTED) {
+    if (browserLang.startsWith(lang)) return lang;
+  }
   return 'es';
 }
 
@@ -27,9 +26,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(detectLanguage);
 
   const setLanguage = useCallback((lang: Language) => {
-    setLanguageState(lang);
     localStorage.setItem('lang', lang);
     document.documentElement.lang = lang;
+    startTransition(() => {
+      setLanguageState(lang);
+    });
   }, []);
 
   useEffect(() => {
