@@ -219,15 +219,19 @@ export default function HomePage() {
       >
         <div className="container mx-auto">
           <h2 className="heading-lg text-center mb-12">{t('scents.title')}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
             {scents.map((scent) => (
-              <motion.div key={scent.name} variants={fadeUp} className="text-center rounded-lg border border-border hover:shadow-md transition-shadow bg-card overflow-hidden">
-                <div className="aspect-square overflow-hidden">
-                  <img src={scent.image} alt={scent.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-heading text-lg font-semibold mb-3">{scent.name}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{scent.desc}</p>
+              <motion.div key={scent.key} variants={fadeUp} className="text-center rounded-lg border border-border hover:shadow-md transition-shadow bg-card overflow-hidden">
+                {scent.image ? (
+                  <div className="aspect-square overflow-hidden">
+                    <img src={scent.image} alt={scent.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  </div>
+                ) : (
+                  <div className="aspect-square bg-muted flex items-center justify-center text-4xl opacity-40">🕯️</div>
+                )}
+                <div className="p-4">
+                  <h3 className="font-heading text-base font-semibold mb-2">{scent.name}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">{scent.desc}</p>
                 </div>
               </motion.div>
             ))}
