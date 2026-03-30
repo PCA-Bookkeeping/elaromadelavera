@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { ShopifyProduct, storefrontApiRequest, PRODUCTS_QUERY, formatPrice } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
-import { ShoppingCart, Loader2 } from "lucide-react";
+import { ShoppingCart, Loader2, Clock, CalendarDays } from "lucide-react";
 import { toast } from "sonner";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function ShopPage() {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
