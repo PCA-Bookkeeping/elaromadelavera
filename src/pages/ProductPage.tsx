@@ -117,8 +117,19 @@ export default function ProductPage() {
                 </div>
               </div>
 
-              <button onClick={handleAddToCart} disabled={isCartLoading || !variant?.availableForSale} className="btn-primary w-full text-base py-4 flex items-center justify-center gap-2 mb-6">
-                {isCartLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <><ShoppingCart className="h-5 w-5" /> {t('product.addToCart')}</>}
+              {isPreOrder && (
+                <div className="flex items-center gap-2 bg-primary/10 text-primary px-3 py-2 rounded-lg text-sm font-medium mb-4">
+                  <Clock className="h-4 w-4" />
+                  {t('shop.preOrderBadge')} — {t('shop.estimatedShipping')}
+                </div>
+              )}
+
+              <button onClick={handleAddToCart} disabled={isCartLoading} className={`w-full text-base py-4 flex items-center justify-center gap-2 mb-6 rounded-md font-medium transition-colors ${isPreOrder ? 'bg-accent text-accent-foreground hover:bg-accent/80' : 'btn-primary'}`}>
+                {isCartLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : isPreOrder ? (
+                  <><CalendarDays className="h-5 w-5" /> {t('shop.reserveNow')}</>
+                ) : (
+                  <><ShoppingCart className="h-5 w-5" /> {t('product.addToCart')}</>
+                )}
               </button>
 
               <div className="grid grid-cols-2 gap-3">
