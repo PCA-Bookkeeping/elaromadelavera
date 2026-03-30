@@ -68,6 +68,12 @@ export default function HomePage() {
 
   return (
     <Layout>
+      <SEOHead
+        title={t('hero.title')}
+        description={t('hero.subtitle')}
+        canonicalPath="/"
+        jsonLd={{ ...organizationSchema, ...localBusinessSchema }}
+      />
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <img src={heroImage} alt="Vela artesanal de cera de soja hecha a mano en La Vera" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
