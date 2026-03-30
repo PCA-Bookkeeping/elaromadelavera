@@ -282,4 +282,20 @@ export const en: Record<string, string> = {
   'customizer.events.total': 'Estimated budget: {price}',
   'customizer.events.contact': 'Contact for Event Order',
   'customizer.minOrder': 'Minimum order for custom candles: 10 units',
+
+  'cookie.title': '🍪 We use cookies',
+  'cookie.text': 'We use cookies to improve your experience. Only essential cookies for site functionality.',
+  'cookie.link': 'Cookie Policy',
+  'cookie.accept': 'Accept',
+  'cookie.decline': 'Decline',
+
+  'b2b.pricing.product': 'Custom candle 250ml',
+  'b2b.pricing.unitPrice': '€10 – 18 / unit',
+  'b2b.pricing.minOrder': 'Min. order',
+  'b2b.pricing.minOrderValue': '10 units',
+  'b2b.pricing.customLabel': 'Custom label',
+  'b2b.pricing.leadTime': 'Lead time',
+  'b2b.pricing.leadTimeValue': '5-10 days',
+  'b2b.pricing.localDelivery': 'Local delivery',
+  'b2b.pricing.localDeliveryValue': '✓ (50 km)',
 };

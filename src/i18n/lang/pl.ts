@@ -282,4 +282,20 @@ export const pl: Record<string, string> = {
   'customizer.events.total': 'Szacowany budżet: {price}',
   'customizer.events.contact': 'Kontakt ws. Zamówienia Eventowego',
   'customizer.minOrder': 'Minimalne zamówienie personalizowanych: 10 sztuk',
+
+  'cookie.title': '🍪 Używamy plików cookie',
+  'cookie.text': 'Używamy plików cookie, aby poprawić Twoje doświadczenia. Tylko niezbędne pliki cookie.',
+  'cookie.link': 'Polityka Cookies',
+  'cookie.accept': 'Akceptuj',
+  'cookie.decline': 'Odrzuć',
+
+  'b2b.pricing.product': 'Spersonalizowana świeca 250ml',
+  'b2b.pricing.unitPrice': '10 – 18 € / szt.',
+  'b2b.pricing.minOrder': 'Min. zamówienie',
+  'b2b.pricing.minOrderValue': '10 sztuk',
+  'b2b.pricing.customLabel': 'Etykieta personalizowana',
+  'b2b.pricing.leadTime': 'Czas realizacji',
+  'b2b.pricing.leadTimeValue': '5-10 dni',
+  'b2b.pricing.localDelivery': 'Lokalna dostawa',
+  'b2b.pricing.localDeliveryValue': '✓ (50 km)',
 };

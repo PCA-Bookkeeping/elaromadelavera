@@ -282,4 +282,20 @@ export const de: Record<string, string> = {
   'customizer.events.total': 'Geschätztes Budget: {price}',
   'customizer.events.contact': 'Kontakt für Event-Bestellung',
   'customizer.minOrder': 'Mindestbestellung für personalisierte Kerzen: 10 Stück',
+
+  'cookie.title': '🍪 Wir verwenden Cookies',
+  'cookie.text': 'Wir verwenden Cookies, um dein Erlebnis zu verbessern. Nur essenzielle Cookies für die Funktionalität.',
+  'cookie.link': 'Cookie-Richtlinie',
+  'cookie.accept': 'Akzeptieren',
+  'cookie.decline': 'Ablehnen',
+
+  'b2b.pricing.product': 'Individuelle Kerze 250ml',
+  'b2b.pricing.unitPrice': '10 – 18 € / Stk.',
+  'b2b.pricing.minOrder': 'Mindestbestellung',
+  'b2b.pricing.minOrderValue': '10 Stück',
+  'b2b.pricing.customLabel': 'Individuelles Etikett',
+  'b2b.pricing.leadTime': 'Produktionszeit',
+  'b2b.pricing.leadTimeValue': '5-10 Tage',
+  'b2b.pricing.localDelivery': 'Lokale Lieferung',
+  'b2b.pricing.localDeliveryValue': '✓ (50 km)',
 };
