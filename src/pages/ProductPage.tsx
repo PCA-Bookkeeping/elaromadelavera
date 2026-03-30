@@ -33,6 +33,7 @@ export default function ProductPage() {
 
   const variant = product?.variants.edges[selectedVariantIdx]?.node;
   const images = product?.images.edges || [];
+  const isPreOrder = variant && !variant.availableForSale;
 
   const handleAddToCart = async () => {
     if (!product || !variant) return;
