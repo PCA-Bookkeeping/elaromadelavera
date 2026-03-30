@@ -46,12 +46,16 @@ export default function HomePage() {
     { title: t('collections.b2b.title'), desc: t('collections.b2b.desc'), link: "/b2b", cta: t('collections.b2b.cta'), image: collectionB2b },
   ];
 
-  const scents = [
-    { name: t('scents.lavanda.name'), desc: t('scents.lavanda.desc'), image: scentLavanda },
-    { name: t('scents.romero.name'), desc: t('scents.romero.desc'), image: scentRomero },
-    { name: t('scents.azahar.name'), desc: t('scents.azahar.desc'), image: scentAzahar },
-    { name: t('scents.jara.name'), desc: t('scents.jara.desc'), image: scentJara },
-  ];
+  const scentKeys = ['lavanda', 'cafe', 'chocolate', 'romero', 'azahar', 'jara', 'canela', 'naranja', 'eucalipto', 'limon', 'vainilla', 'menta', 'coco', 'fresa', 'frutos'] as const;
+  const scentImages: Record<string, string> = {
+    lavanda: scentLavanda, romero: scentRomero, azahar: scentAzahar, jara: scentJara,
+  };
+  const scents = scentKeys.map(key => ({
+    key,
+    name: t(`scents.${key}.name`),
+    desc: t(`scents.${key}.desc`),
+    image: scentImages[key] || null,
+  }));
 
   const steps = [
     { title: t('process.1.title'), desc: t('process.1.desc') },
