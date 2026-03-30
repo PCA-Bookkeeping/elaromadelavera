@@ -281,3 +281,48 @@ export function formatPrice(amount: string, currencyCode: string = 'EUR'): strin
   const num = parseFloat(amount);
   return `${num.toFixed(2).replace('.', ',')} €`;
 }
+
+export const BLOG_ARTICLES_QUERY = `
+  query GetBlogArticles($first: Int!) {
+    blogs(first: 1) {
+      edges {
+        node {
+          articles(first: $first, sortKey: PUBLISHED_AT, reverse: true) {
+            edges {
+              node {
+                id
+                title
+                handle
+                publishedAt
+                contentHtml
+                content(truncateAt: 200)
+                image {
+                  url
+                  altText
+                }
+                blog {
+                  handle
+                }
+                tags
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+export interface ShopifyArticle {
+  node: {
+    id: string;
+    title: string;
+    handle: string;
+    publishedAt: string;
+    contentHtml: string;
+    content: string;
+    image: { url: string; altText: string | null } | null;
+    blog: { handle: string };
+    tags: string[];
+  };
+}
