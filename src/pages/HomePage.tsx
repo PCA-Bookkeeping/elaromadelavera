@@ -3,6 +3,7 @@ import { Layout } from "@/components/Layout";
 import { Leaf, Flower2, Hand, MapPin, ChevronRight, Star, Shield, CreditCard, Package, RotateCcw, Sparkles, Flame, Eye } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEOHead, organizationSchema, localBusinessSchema } from "@/components/SEOHead";
 import heroImage from "@/assets/hero-candle.jpg";
 import collectionHogar from "@/assets/collection-hogar.jpg";
 import collectionRegalo from "@/assets/collection-regalo.jpg";
