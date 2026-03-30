@@ -60,7 +60,7 @@ export const faqTranslations: Record<Language, Array<{ title: string; items: Arr
     { title: 'About Our Candles', items: [
       { q: 'What are your candles made of?', a: 'Our candles are made from 100% natural soy wax, pure essential oils, cotton wicks, and natural dyes. No paraffin, synthetic fragrances, or artificial additives.' },
       { q: 'How long does a candle last?', a: 'Depends on size. 150ml lasts ~20-25 hours. 250ml ~35-40 hours. 500ml ~60-70 hours.' },
-      { q: 'What scents do you offer?', a: 'Extremaduran Lavender, Wild Rosemary, Orange Blossom, and Mountain Rockrose.' },
+      { q: 'What scents do you offer?', a: 'Extremaduran Lavender, Coffee, Chocolate, Wild Rosemary, Orange Blossom, Mountain Rockrose, Cinnamon, Sweet Orange, Eucalyptus, Lemon, Vanilla, Mint, Coconut, Strawberry, and Forest Berries.' },
       { q: 'Can I reuse the container?', a: 'Yes! Clean with hot water to remove wax residue.' },
       { q: 'Are your candles vegan?', a: 'Yes. All ingredients are plant-based. No beeswax or animal products.' },
     ]},
