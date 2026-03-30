@@ -282,4 +282,20 @@ export const it: Record<string, string> = {
   'customizer.events.total': 'Budget stimato: {price}',
   'customizer.events.contact': 'Contatta per Ordine Evento',
   'customizer.minOrder': 'Ordine minimo per personalizzate: 10 unità',
+
+  'cookie.title': '🍪 Usiamo i cookie',
+  'cookie.text': 'Utilizziamo i cookie per migliorare la tua esperienza. Solo cookie essenziali per il funzionamento del sito.',
+  'cookie.link': 'Politica dei Cookie',
+  'cookie.accept': 'Accetta',
+  'cookie.decline': 'Rifiuta',
+
+  'b2b.pricing.product': 'Candela personalizzata 250ml',
+  'b2b.pricing.unitPrice': '10 – 18 € / unità',
+  'b2b.pricing.minOrder': 'Ordine minimo',
+  'b2b.pricing.minOrderValue': '10 unità',
+  'b2b.pricing.customLabel': 'Etichetta personalizzata',
+  'b2b.pricing.leadTime': 'Tempo di produzione',
+  'b2b.pricing.leadTimeValue': '5-10 giorni',
+  'b2b.pricing.localDelivery': 'Consegna locale',
+  'b2b.pricing.localDeliveryValue': '✓ (50 km)',
 };

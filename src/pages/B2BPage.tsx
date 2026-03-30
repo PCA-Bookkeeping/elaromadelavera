@@ -79,11 +79,11 @@ export default function B2BPage() {
           <h2 className="heading-lg text-center mb-8">{t('b2b.pricing.title')}</h2>
           <div className="rounded-lg border border-border p-8 space-y-4">
             {[
-              ["Vela personalizada 250ml", "10 – 18 € / unit"],
-              ["Min. order", "10 units"],
-              ["Custom label", "✓"],
-              ["Lead time", "5-10 days"],
-              ["Local delivery", "✓ (50 km)"],
+              [t('b2b.pricing.product'), t('b2b.pricing.unitPrice')],
+              [t('b2b.pricing.minOrder'), t('b2b.pricing.minOrderValue')],
+              [t('b2b.pricing.customLabel'), "✓"],
+              [t('b2b.pricing.leadTime'), t('b2b.pricing.leadTimeValue')],
+              [t('b2b.pricing.localDelivery'), t('b2b.pricing.localDeliveryValue')],
             ].map(([label, value]) => (
               <div key={label} className="flex justify-between items-start border-b border-border pb-3 last:border-0 last:pb-0">
                 <span className="font-medium text-sm">{label}</span>

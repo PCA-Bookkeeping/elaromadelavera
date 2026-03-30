@@ -282,4 +282,20 @@ export const nl: Record<string, string> = {
   'customizer.events.total': 'Geschat budget: {price}',
   'customizer.events.contact': 'Contact voor Evenement Bestelling',
   'customizer.minOrder': 'Minimale bestelling voor gepersonaliseerd: 10 stuks',
+
+  'cookie.title': '🍪 Wij gebruiken cookies',
+  'cookie.text': 'Wij gebruiken cookies om je ervaring te verbeteren. Alleen essentiële cookies voor de werking van de site.',
+  'cookie.link': 'Cookiebeleid',
+  'cookie.accept': 'Accepteren',
+  'cookie.decline': 'Weigeren',
+
+  'b2b.pricing.product': 'Gepersonaliseerde kaars 250ml',
+  'b2b.pricing.unitPrice': '10 – 18 € / stuk',
+  'b2b.pricing.minOrder': 'Min. bestelling',
+  'b2b.pricing.minOrderValue': '10 stuks',
+  'b2b.pricing.customLabel': 'Gepersonaliseerd etiket',
+  'b2b.pricing.leadTime': 'Productietijd',
+  'b2b.pricing.leadTimeValue': '5-10 dagen',
+  'b2b.pricing.localDelivery': 'Lokale levering',
+  'b2b.pricing.localDeliveryValue': '✓ (50 km)',
 };
