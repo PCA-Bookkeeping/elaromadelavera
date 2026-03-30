@@ -88,7 +88,7 @@ export const faqTranslations: Record<Language, Array<{ title: string; items: Arr
     { title: 'O Naszych Świecach', items: [
       { q: 'Z czego są zrobione wasze świece?', a: 'Nasze świece są wykonane z naturalnego wosku sojowego, czystych olejków eterycznych, bawełnianych knotów i naturalnych barwników. Bez parafiny i sztucznych aromatów.' },
       { q: 'Jak długo pali się świeca?', a: 'Zależy od rozmiaru. 150ml ~20-25h. 250ml ~35-40h. 500ml ~60-70h.' },
-      { q: 'Jakie zapachy oferujecie?', a: 'Estremadurska Lawenda, Dziki Rozmaryn, Kwiat Pomarańczy i Górski Czystek.' },
+      { q: 'Jakie zapachy oferujecie?', a: 'Estremadurska Lawenda, Kawa, Czekolada, Dziki Rozmaryn, Kwiat Pomarańczy, Górski Czystek, Cynamon, Słodka Pomarańcza, Eukaliptus, Cytryna, Wanilia, Mięta, Kokos, Truskawka i Owoce Leśne.' },
       { q: 'Czy mogę ponownie użyć pojemnika?', a: 'Tak! Umyj gorącą wodą, aby usunąć resztki wosku.' },
       { q: 'Czy wasze świece są wegańskie?', a: 'Tak. Wszystkie składniki są roślinne. Bez wosku pszczelego.' },
     ]},
