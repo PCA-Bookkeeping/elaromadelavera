@@ -116,7 +116,7 @@ export const faqTranslations: Record<Language, Array<{ title: string; items: Arr
     { title: 'Über Unsere Kerzen', items: [
       { q: 'Woraus bestehen eure Kerzen?', a: '100% natürliches Sojawachs, reine ätherische Öle, Baumwolldochte und natürliche Farbstoffe. Kein Paraffin.' },
       { q: 'Wie lange brennt eine Kerze?', a: '150ml ~20-25h. 250ml ~35-40h. 500ml ~60-70h.' },
-      { q: 'Welche Düfte bietet ihr an?', a: 'Extremadura-Lavendel, Wilder Rosmarin, Orangenblüte und Berg-Zistrose.' },
+      { q: 'Welche Düfte bietet ihr an?', a: 'Extremadura-Lavendel, Kaffee, Schokolade, Wilder Rosmarin, Orangenblüte, Berg-Zistrose, Zimt, Süße Orange, Eukalyptus, Zitrone, Vanille, Minze, Kokosnuss, Erdbeere und Waldbeeren.' },
     ]},
     { title: 'Bestellungen & Versand', items: [
       { q: 'Wohin liefert ihr?', a: 'Ganz Spanien und die Europäische Union.' },
