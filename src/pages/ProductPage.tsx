@@ -66,7 +66,18 @@ export default function ProductPage() {
 
   return (
     <Layout>
-      <section className="section-padding">
+      <SEOHead
+        title={product.title}
+        description={product.description}
+        canonicalPath={`/producto/${product.handle}`}
+        jsonLd={productSchema({
+          name: product.title,
+          description: product.description,
+          price: variant?.price.amount || '0',
+          image: images[0]?.node.url,
+          url: `https://elaromadelavera.lovable.app/producto/${product.handle}`,
+        })}
+      />
         <div className="container mx-auto">
           <Link to="/tienda" className="text-sm text-muted-foreground hover:text-foreground mb-8 inline-block">{t('product.backToShop')}</Link>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
