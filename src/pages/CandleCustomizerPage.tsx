@@ -10,7 +10,7 @@ const SIZES = [
   { id: '500', ml: 500, basePrice: 39.90 },
 ] as const;
 
-const SCENTS = ['lavanda', 'romero', 'azahar', 'jara'] as const;
+const SCENTS = ['lavanda', 'romero', 'azahar', 'jara', 'cafe', 'chocolate', 'canela', 'naranja', 'eucalipto', 'limon', 'vainilla', 'menta', 'coco', 'fresa', 'frutos'] as const;
 const LABELS = ['classic', 'minimal', 'rustic', 'elegant'] as const;
 
 const EVENT_TYPES = ['wedding', 'corporate', 'party', 'other'] as const;
