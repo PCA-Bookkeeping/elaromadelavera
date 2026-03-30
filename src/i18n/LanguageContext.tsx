@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, ReactNode, useCallback, startTransition } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
 import { Language, getTranslation } from './translations';
 
 interface LanguageContextType {
@@ -28,9 +28,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const setLanguage = useCallback((lang: Language) => {
     localStorage.setItem('lang', lang);
     document.documentElement.lang = lang;
-    startTransition(() => {
-      setLanguageState(lang);
-    });
+    setLanguageState(lang);
   }, []);
 
   useEffect(() => {

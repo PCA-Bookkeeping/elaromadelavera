@@ -11,10 +11,10 @@ export function AnnouncementBar() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setMsgIndex((i) => (i + 1) % messages.length);
+      setMsgIndex((i) => (i + 1) % 3);
     }, 5000);
     return () => clearInterval(interval);
-  }, [messages.length]);
+  }, []);
 
   if (!visible) return null;
 
