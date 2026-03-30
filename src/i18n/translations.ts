@@ -131,7 +131,7 @@ export const faqTranslations: Record<Language, Array<{ title: string; items: Arr
     { title: 'Nos Bougies', items: [
       { q: 'De quoi sont faites vos bougies ?', a: 'Cire de soja 100% naturelle, huiles essentielles pures, mèches en coton et colorants naturels. Sans paraffine.' },
       { q: 'Combien de temps brûle une bougie ?', a: '150ml ~20-25h. 250ml ~35-40h. 500ml ~60-70h.' },
-      { q: 'Quels parfums proposez-vous ?', a: 'Lavande d\'Estrémadure, Romarin Sauvage, Fleur d\'Oranger et Ciste des Montagnes.' },
+      { q: 'Quels parfums proposez-vous ?', a: 'Lavande d\'Estrémadure, Café, Chocolat, Romarin Sauvage, Fleur d\'Oranger, Ciste des Montagnes, Cannelle, Orange Douce, Eucalyptus, Citron, Vanille, Menthe, Noix de Coco, Fraise et Fruits des Bois.' },
     ]},
     { title: 'Commandes & Livraison', items: [
       { q: 'Où livrez-vous ?', a: 'Toute l\'Espagne et l\'Union Européenne.' },
