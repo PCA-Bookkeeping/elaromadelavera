@@ -32,7 +32,7 @@ export const faqTranslations: Record<Language, Array<{ title: string; items: Arr
     { title: 'Sobre Nuestras Velas', items: [
       { q: '¿De qué están hechas vuestras velas?', a: 'Nuestras velas están hechas de cera de soja 100% natural, aceites esenciales puros, mechas de algodón y colorantes naturales. No utilizamos parafina, fragancias sintéticas ni aditivos artificiales.' },
       { q: '¿Cuánto dura una vela?', a: 'Depende del tamaño. Una vela de 150ml dura aprox. 20-25 horas. Una de 250ml, 35-40 horas. Una de 500ml, 60-70 horas.' },
-      { q: '¿Qué aromas tenéis?', a: 'Lavanda Extremeña, Romero Silvestre, Azahar (Flor de Naranjo) y Jara de la Sierra.' },
+      { q: '¿Qué aromas tenéis?', a: 'Lavanda Extremeña, Café, Chocolate, Romero Silvestre, Azahar (Flor de Naranjo), Jara de la Sierra, Canela, Naranja Dulce, Eucalipto, Limón, Vainilla, Menta, Coco, Fresa y Frutos del Bosque.' },
       { q: '¿Puedo reutilizar el recipiente?', a: 'Sí. Limpia el recipiente con agua caliente para retirar los restos de cera.' },
       { q: '¿Vuestras velas son veganas?', a: 'Sí. Todos nuestros ingredientes son de origen vegetal. No utilizamos cera de abeja ni productos animales.' },
     ]},
