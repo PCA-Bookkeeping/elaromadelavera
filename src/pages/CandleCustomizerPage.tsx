@@ -10,7 +10,7 @@ const SIZES = [
   { id: '500', ml: 500, basePrice: 39.90 },
 ] as const;
 
-const SCENTS = ['lavanda', 'romero', 'azahar', 'jara'] as const;
+const SCENTS = ['lavanda', 'romero', 'azahar', 'jara', 'cafe', 'chocolate', 'canela', 'naranja', 'eucalipto', 'limon', 'vainilla', 'menta', 'coco', 'fresa', 'frutos'] as const;
 const LABELS = ['classic', 'minimal', 'rustic', 'elegant'] as const;
 
 const EVENT_TYPES = ['wedding', 'corporate', 'party', 'other'] as const;
@@ -96,7 +96,7 @@ export default function CandleCustomizerPage() {
                   <span className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</span>
                   {t('customizer.step.scent')}
                 </h3>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-3 gap-2">
                   {SCENTS.map(s => (
                     <button
                       key={s}

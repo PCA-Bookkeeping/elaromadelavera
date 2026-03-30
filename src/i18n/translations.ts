@@ -32,7 +32,7 @@ export const faqTranslations: Record<Language, Array<{ title: string; items: Arr
     { title: 'Sobre Nuestras Velas', items: [
       { q: '¿De qué están hechas vuestras velas?', a: 'Nuestras velas están hechas de cera de soja 100% natural, aceites esenciales puros, mechas de algodón y colorantes naturales. No utilizamos parafina, fragancias sintéticas ni aditivos artificiales.' },
       { q: '¿Cuánto dura una vela?', a: 'Depende del tamaño. Una vela de 150ml dura aprox. 20-25 horas. Una de 250ml, 35-40 horas. Una de 500ml, 60-70 horas.' },
-      { q: '¿Qué aromas tenéis?', a: 'Lavanda Extremeña, Romero Silvestre, Azahar (Flor de Naranjo) y Jara de la Sierra.' },
+      { q: '¿Qué aromas tenéis?', a: 'Lavanda Extremeña, Café, Chocolate, Romero Silvestre, Azahar (Flor de Naranjo), Jara de la Sierra, Canela, Naranja Dulce, Eucalipto, Limón, Vainilla, Menta, Coco, Fresa y Frutos del Bosque.' },
       { q: '¿Puedo reutilizar el recipiente?', a: 'Sí. Limpia el recipiente con agua caliente para retirar los restos de cera.' },
       { q: '¿Vuestras velas son veganas?', a: 'Sí. Todos nuestros ingredientes son de origen vegetal. No utilizamos cera de abeja ni productos animales.' },
     ]},
@@ -60,7 +60,7 @@ export const faqTranslations: Record<Language, Array<{ title: string; items: Arr
     { title: 'About Our Candles', items: [
       { q: 'What are your candles made of?', a: 'Our candles are made from 100% natural soy wax, pure essential oils, cotton wicks, and natural dyes. No paraffin, synthetic fragrances, or artificial additives.' },
       { q: 'How long does a candle last?', a: 'Depends on size. 150ml lasts ~20-25 hours. 250ml ~35-40 hours. 500ml ~60-70 hours.' },
-      { q: 'What scents do you offer?', a: 'Extremaduran Lavender, Wild Rosemary, Orange Blossom, and Mountain Rockrose.' },
+      { q: 'What scents do you offer?', a: 'Extremaduran Lavender, Coffee, Chocolate, Wild Rosemary, Orange Blossom, Mountain Rockrose, Cinnamon, Sweet Orange, Eucalyptus, Lemon, Vanilla, Mint, Coconut, Strawberry, and Forest Berries.' },
       { q: 'Can I reuse the container?', a: 'Yes! Clean with hot water to remove wax residue.' },
       { q: 'Are your candles vegan?', a: 'Yes. All ingredients are plant-based. No beeswax or animal products.' },
     ]},
@@ -88,7 +88,7 @@ export const faqTranslations: Record<Language, Array<{ title: string; items: Arr
     { title: 'O Naszych Świecach', items: [
       { q: 'Z czego są zrobione wasze świece?', a: 'Nasze świece są wykonane z naturalnego wosku sojowego, czystych olejków eterycznych, bawełnianych knotów i naturalnych barwników. Bez parafiny i sztucznych aromatów.' },
       { q: 'Jak długo pali się świeca?', a: 'Zależy od rozmiaru. 150ml ~20-25h. 250ml ~35-40h. 500ml ~60-70h.' },
-      { q: 'Jakie zapachy oferujecie?', a: 'Estremadurska Lawenda, Dziki Rozmaryn, Kwiat Pomarańczy i Górski Czystek.' },
+      { q: 'Jakie zapachy oferujecie?', a: 'Estremadurska Lawenda, Kawa, Czekolada, Dziki Rozmaryn, Kwiat Pomarańczy, Górski Czystek, Cynamon, Słodka Pomarańcza, Eukaliptus, Cytryna, Wanilia, Mięta, Kokos, Truskawka i Owoce Leśne.' },
       { q: 'Czy mogę ponownie użyć pojemnika?', a: 'Tak! Umyj gorącą wodą, aby usunąć resztki wosku.' },
       { q: 'Czy wasze świece są wegańskie?', a: 'Tak. Wszystkie składniki są roślinne. Bez wosku pszczelego.' },
     ]},
@@ -116,7 +116,7 @@ export const faqTranslations: Record<Language, Array<{ title: string; items: Arr
     { title: 'Über Unsere Kerzen', items: [
       { q: 'Woraus bestehen eure Kerzen?', a: '100% natürliches Sojawachs, reine ätherische Öle, Baumwolldochte und natürliche Farbstoffe. Kein Paraffin.' },
       { q: 'Wie lange brennt eine Kerze?', a: '150ml ~20-25h. 250ml ~35-40h. 500ml ~60-70h.' },
-      { q: 'Welche Düfte bietet ihr an?', a: 'Extremadura-Lavendel, Wilder Rosmarin, Orangenblüte und Berg-Zistrose.' },
+      { q: 'Welche Düfte bietet ihr an?', a: 'Extremadura-Lavendel, Kaffee, Schokolade, Wilder Rosmarin, Orangenblüte, Berg-Zistrose, Zimt, Süße Orange, Eukalyptus, Zitrone, Vanille, Minze, Kokosnuss, Erdbeere und Waldbeeren.' },
     ]},
     { title: 'Bestellungen & Versand', items: [
       { q: 'Wohin liefert ihr?', a: 'Ganz Spanien und die Europäische Union.' },
@@ -131,7 +131,7 @@ export const faqTranslations: Record<Language, Array<{ title: string; items: Arr
     { title: 'Nos Bougies', items: [
       { q: 'De quoi sont faites vos bougies ?', a: 'Cire de soja 100% naturelle, huiles essentielles pures, mèches en coton et colorants naturels. Sans paraffine.' },
       { q: 'Combien de temps brûle une bougie ?', a: '150ml ~20-25h. 250ml ~35-40h. 500ml ~60-70h.' },
-      { q: 'Quels parfums proposez-vous ?', a: 'Lavande d\'Estrémadure, Romarin Sauvage, Fleur d\'Oranger et Ciste des Montagnes.' },
+      { q: 'Quels parfums proposez-vous ?', a: 'Lavande d\'Estrémadure, Café, Chocolat, Romarin Sauvage, Fleur d\'Oranger, Ciste des Montagnes, Cannelle, Orange Douce, Eucalyptus, Citron, Vanille, Menthe, Noix de Coco, Fraise et Fruits des Bois.' },
     ]},
     { title: 'Commandes & Livraison', items: [
       { q: 'Où livrez-vous ?', a: 'Toute l\'Espagne et l\'Union Européenne.' },

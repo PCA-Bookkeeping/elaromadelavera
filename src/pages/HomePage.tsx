@@ -46,12 +46,16 @@ export default function HomePage() {
     { title: t('collections.b2b.title'), desc: t('collections.b2b.desc'), link: "/b2b", cta: t('collections.b2b.cta'), image: collectionB2b },
   ];
 
-  const scents = [
-    { name: t('scents.lavanda.name'), desc: t('scents.lavanda.desc'), image: scentLavanda },
-    { name: t('scents.romero.name'), desc: t('scents.romero.desc'), image: scentRomero },
-    { name: t('scents.azahar.name'), desc: t('scents.azahar.desc'), image: scentAzahar },
-    { name: t('scents.jara.name'), desc: t('scents.jara.desc'), image: scentJara },
-  ];
+  const scentKeys = ['lavanda', 'cafe', 'chocolate', 'romero', 'azahar', 'jara', 'canela', 'naranja', 'eucalipto', 'limon', 'vainilla', 'menta', 'coco', 'fresa', 'frutos'] as const;
+  const scentImages: Record<string, string> = {
+    lavanda: scentLavanda, romero: scentRomero, azahar: scentAzahar, jara: scentJara,
+  };
+  const scents = scentKeys.map(key => ({
+    key,
+    name: t(`scents.${key}.name`),
+    desc: t(`scents.${key}.desc`),
+    image: scentImages[key] || null,
+  }));
 
   const steps = [
     { title: t('process.1.title'), desc: t('process.1.desc') },
@@ -215,15 +219,19 @@ export default function HomePage() {
       >
         <div className="container mx-auto">
           <h2 className="heading-lg text-center mb-12">{t('scents.title')}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
             {scents.map((scent) => (
-              <motion.div key={scent.name} variants={fadeUp} className="text-center rounded-lg border border-border hover:shadow-md transition-shadow bg-card overflow-hidden">
-                <div className="aspect-square overflow-hidden">
-                  <img src={scent.image} alt={scent.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-heading text-lg font-semibold mb-3">{scent.name}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{scent.desc}</p>
+              <motion.div key={scent.key} variants={fadeUp} className="text-center rounded-lg border border-border hover:shadow-md transition-shadow bg-card overflow-hidden">
+                {scent.image ? (
+                  <div className="aspect-square overflow-hidden">
+                    <img src={scent.image} alt={scent.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  </div>
+                ) : (
+                  <div className="aspect-square bg-muted flex items-center justify-center text-4xl opacity-40">🕯️</div>
+                )}
+                <div className="p-4">
+                  <h3 className="font-heading text-base font-semibold mb-2">{scent.name}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">{scent.desc}</p>
                 </div>
               </motion.div>
             ))}
