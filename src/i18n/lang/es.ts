@@ -175,6 +175,11 @@ export const es: Record<string, string> = {
   'shop.comingSoon': 'Próximamente',
   'shop.comingSoonDesc': 'Estamos preparando nuestras velas con mucho cariño. ¡Vuelve pronto!',
   'shop.addToCart': 'Añadir',
+  'shop.preOrder': 'Pre-venta — Reserva antes de que se agoten',
+  'shop.preOrderBadge': 'Pre-venta',
+  'shop.reserveNow': 'Reservar',
+  'shop.estimatedDate': 'Primeros envíos estimados: Mayo 2026',
+  'shop.estimatedShipping': 'Envío estimado: Mayo 2026',
 
   // Product
   'product.notFound': 'Producto no encontrado',
