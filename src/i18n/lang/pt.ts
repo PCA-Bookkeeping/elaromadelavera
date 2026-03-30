@@ -282,4 +282,20 @@ export const pt: Record<string, string> = {
   'customizer.events.total': 'Orçamento estimado: {price}',
   'customizer.events.contact': 'Contactar para Encomenda de Evento',
   'customizer.minOrder': 'Encomenda mínima para personalizadas: 10 unidades',
+
+  'cookie.title': '🍪 Usamos cookies',
+  'cookie.text': 'Usamos cookies para melhorar a sua experiência. Apenas cookies essenciais para o funcionamento do site.',
+  'cookie.link': 'Política de Cookies',
+  'cookie.accept': 'Aceitar',
+  'cookie.decline': 'Recusar',
+
+  'b2b.pricing.product': 'Vela personalizada 250ml',
+  'b2b.pricing.unitPrice': '10 – 18 € / unid.',
+  'b2b.pricing.minOrder': 'Encomenda mín.',
+  'b2b.pricing.minOrderValue': '10 unidades',
+  'b2b.pricing.customLabel': 'Etiqueta personalizada',
+  'b2b.pricing.leadTime': 'Prazo de produção',
+  'b2b.pricing.leadTimeValue': '5-10 dias',
+  'b2b.pricing.localDelivery': 'Entrega local',
+  'b2b.pricing.localDeliveryValue': '✓ (50 km)',
 };

@@ -282,4 +282,20 @@ export const fr: Record<string, string> = {
   'customizer.events.total': 'Budget estimé : {price}',
   'customizer.events.contact': 'Contact pour Commande Événement',
   'customizer.minOrder': 'Commande minimum pour bougies personnalisées : 10 unités',
+
+  'cookie.title': '🍪 Nous utilisons des cookies',
+  'cookie.text': 'Nous utilisons des cookies pour améliorer votre expérience. Uniquement les cookies essentiels.',
+  'cookie.link': 'Politique de Cookies',
+  'cookie.accept': 'Accepter',
+  'cookie.decline': 'Refuser',
+
+  'b2b.pricing.product': 'Bougie personnalisée 250ml',
+  'b2b.pricing.unitPrice': '10 – 18 € / unité',
+  'b2b.pricing.minOrder': 'Commande min.',
+  'b2b.pricing.minOrderValue': '10 unités',
+  'b2b.pricing.customLabel': 'Étiquette personnalisée',
+  'b2b.pricing.leadTime': 'Délai de production',
+  'b2b.pricing.leadTimeValue': '5-10 jours',
+  'b2b.pricing.localDelivery': 'Livraison locale',
+  'b2b.pricing.localDeliveryValue': '✓ (50 km)',
 };
