@@ -3,10 +3,11 @@ import { useParams, Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { storefrontApiRequest, PRODUCT_BY_HANDLE_QUERY, formatPrice, type ShopifyProduct } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
-import { ShoppingCart, Loader2, Leaf, Hand, Truck, RotateCcw } from "lucide-react";
+import { ShoppingCart, Loader2, Leaf, Hand, Truck, RotateCcw, Clock, CalendarDays } from "lucide-react";
 import { toast } from "sonner";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEOHead, productSchema } from "@/components/SEOHead";
 
 export default function ProductPage() {
   const { handle } = useParams<{ handle: string }>();
