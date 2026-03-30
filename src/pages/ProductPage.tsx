@@ -78,6 +78,7 @@ export default function ProductPage() {
           url: `https://elaromadelavera.lovable.app/producto/${product.handle}`,
         })}
       />
+      <section className="section-padding">
         <div className="container mx-auto">
           <Link to="/tienda" className="text-sm text-muted-foreground hover:text-foreground mb-8 inline-block">{t('product.backToShop')}</Link>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
