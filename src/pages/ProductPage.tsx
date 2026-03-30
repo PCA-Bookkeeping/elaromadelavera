@@ -3,10 +3,11 @@ import { useParams, Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { storefrontApiRequest, PRODUCT_BY_HANDLE_QUERY, formatPrice, type ShopifyProduct } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
-import { ShoppingCart, Loader2, Leaf, Hand, Truck, RotateCcw } from "lucide-react";
+import { ShoppingCart, Loader2, Leaf, Hand, Truck, RotateCcw, Clock, CalendarDays } from "lucide-react";
 import { toast } from "sonner";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEOHead, productSchema } from "@/components/SEOHead";
 
 export default function ProductPage() {
   const { handle } = useParams<{ handle: string }>();
@@ -32,6 +33,7 @@ export default function ProductPage() {
 
   const variant = product?.variants.edges[selectedVariantIdx]?.node;
   const images = product?.images.edges || [];
+  const isPreOrder = variant && !variant.availableForSale;
 
   const handleAddToCart = async () => {
     if (!product || !variant) return;
@@ -64,6 +66,18 @@ export default function ProductPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title={product.title}
+        description={product.description}
+        canonicalPath={`/producto/${product.handle}`}
+        jsonLd={productSchema({
+          name: product.title,
+          description: product.description,
+          price: variant?.price.amount || '0',
+          image: images[0]?.node.url,
+          url: `https://elaromadelavera.lovable.app/producto/${product.handle}`,
+        })}
+      />
       <section className="section-padding">
         <div className="container mx-auto">
           <Link to="/tienda" className="text-sm text-muted-foreground hover:text-foreground mb-8 inline-block">{t('product.backToShop')}</Link>
@@ -115,8 +129,19 @@ export default function ProductPage() {
                 </div>
               </div>
 
-              <button onClick={handleAddToCart} disabled={isCartLoading || !variant?.availableForSale} className="btn-primary w-full text-base py-4 flex items-center justify-center gap-2 mb-6">
-                {isCartLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <><ShoppingCart className="h-5 w-5" /> {t('product.addToCart')}</>}
+              {isPreOrder && (
+                <div className="flex items-center gap-2 bg-primary/10 text-primary px-3 py-2 rounded-lg text-sm font-medium mb-4">
+                  <Clock className="h-4 w-4" />
+                  {t('shop.preOrderBadge')} — {t('shop.estimatedShipping')}
+                </div>
+              )}
+
+              <button onClick={handleAddToCart} disabled={isCartLoading} className={`w-full text-base py-4 flex items-center justify-center gap-2 mb-6 rounded-md font-medium transition-colors ${isPreOrder ? 'bg-accent text-accent-foreground hover:bg-accent/80' : 'btn-primary'}`}>
+                {isCartLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : isPreOrder ? (
+                  <><CalendarDays className="h-5 w-5" /> {t('shop.reserveNow')}</>
+                ) : (
+                  <><ShoppingCart className="h-5 w-5" /> {t('product.addToCart')}</>
+                )}
               </button>
 
               <div className="grid grid-cols-2 gap-3">

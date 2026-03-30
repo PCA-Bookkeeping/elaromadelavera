@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { ShopifyProduct, storefrontApiRequest, PRODUCTS_QUERY, formatPrice } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
-import { ShoppingCart, Loader2 } from "lucide-react";
+import { ShoppingCart, Loader2, Clock, CalendarDays } from "lucide-react";
 import { toast } from "sonner";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function ShopPage() {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
@@ -41,6 +42,7 @@ export default function ShopPage() {
 
   return (
     <Layout>
+      <SEOHead title={t('shop.title')} description={t('shop.subtitle')} canonicalPath="/tienda" />
       <section className="section-padding">
         <div className="container mx-auto">
           <h1 className="heading-xl text-center mb-4">{t('shop.title')}</h1>
@@ -52,21 +54,38 @@ export default function ShopPage() {
             </div>
           ) : products.length === 0 ? (
             <div className="text-center py-20">
-              <span className="text-6xl mb-4 block">🕯️</span>
+              <span className="text-6xl mb-6 block">🕯️</span>
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Clock className="h-4 w-4" />
+                {t('shop.preOrder')}
+              </div>
               <h2 className="heading-md mb-2">{t('shop.comingSoon')}</h2>
-              <p className="text-muted-foreground">{t('shop.comingSoonDesc')}</p>
+              <p className="text-muted-foreground mb-4">{t('shop.comingSoonDesc')}</p>
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <CalendarDays className="h-4 w-4" />
+                <span>{t('shop.estimatedDate')}</span>
+              </div>
+              <Link to="/personalizar" className="btn-primary mt-8 inline-flex items-center gap-2">
+                {t('nav.customizer')} <ShoppingCart className="h-4 w-4" />
+              </Link>
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {products.map((product) => {
                 const variant = product.node.variants.edges[0]?.node;
                 const image = product.node.images.edges[0]?.node;
+                const isPreOrder = !variant?.availableForSale;
                 return (
-                  <div key={product.node.id} className="group border border-border rounded-lg overflow-hidden bg-card hover:shadow-md transition-shadow">
+                  <div key={product.node.id} className="group border border-border rounded-lg overflow-hidden bg-card hover:shadow-md transition-shadow relative">
+                    {isPreOrder && (
+                      <div className="absolute top-3 left-3 z-10 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                        <Clock className="h-3 w-3" /> {t('shop.preOrderBadge')}
+                      </div>
+                    )}
                     <Link to={`/producto/${product.node.handle}`}>
                       <div className="aspect-square bg-muted overflow-hidden">
                         {image ? (
-                          <img src={image.url} alt={image.altText || product.node.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                          <img src={image.url} alt={image.altText || product.node.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center text-6xl opacity-30">🕯️</div>
                         )}
@@ -82,11 +101,26 @@ export default function ShopPage() {
                         <button
                           onClick={() => handleAddToCart(product)}
                           disabled={isCartLoading}
-                          className="btn-primary text-sm px-4 py-2 inline-flex items-center gap-2"
+                          className={`text-sm px-4 py-2 inline-flex items-center gap-2 rounded-md font-medium transition-colors ${
+                            isPreOrder
+                              ? 'bg-accent text-accent-foreground hover:bg-accent/80'
+                              : 'btn-primary'
+                          }`}
                         >
-                          {isCartLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <><ShoppingCart className="h-4 w-4" /> {t('shop.addToCart')}</>}
+                          {isCartLoading ? (
+                            <Loader2 className="h-4 w-4 animate-spin" />
+                          ) : isPreOrder ? (
+                            <><CalendarDays className="h-4 w-4" /> {t('shop.reserveNow')}</>
+                          ) : (
+                            <><ShoppingCart className="h-4 w-4" /> {t('shop.addToCart')}</>
+                          )}
                         </button>
                       </div>
+                      {isPreOrder && (
+                        <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
+                          <CalendarDays className="h-3 w-3" /> {t('shop.estimatedShipping')}
+                        </p>
+                      )}
                     </div>
                   </div>
                 );

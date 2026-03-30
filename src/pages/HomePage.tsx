@@ -3,6 +3,7 @@ import { Layout } from "@/components/Layout";
 import { Leaf, Flower2, Hand, MapPin, ChevronRight, Star, Shield, CreditCard, Package, RotateCcw, Sparkles, Flame, Eye } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEOHead, organizationSchema, localBusinessSchema } from "@/components/SEOHead";
 import heroImage from "@/assets/hero-candle.jpg";
 import collectionHogar from "@/assets/collection-hogar.jpg";
 import collectionRegalo from "@/assets/collection-regalo.jpg";
@@ -67,6 +68,12 @@ export default function HomePage() {
 
   return (
     <Layout>
+      <SEOHead
+        title={t('hero.title')}
+        description={t('hero.subtitle')}
+        canonicalPath="/"
+        jsonLd={{ ...organizationSchema, ...localBusinessSchema }}
+      />
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <img src={heroImage} alt="Vela artesanal de cera de soja hecha a mano en La Vera" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
