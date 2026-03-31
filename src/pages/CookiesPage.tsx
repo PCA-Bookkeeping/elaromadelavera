@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Language } from "@/i18n/translations";
 
@@ -29,6 +30,7 @@ export default function CookiesPage() {
   const { t, language } = useLanguage();
   return (
     <Layout>
+      <SEOHead title={t('cookies.title')} description="Información sobre cookies esenciales, analíticas y de marketing en la tienda." canonicalPath="/cookies" />
       <section className="gradient-gold section-padding text-center">
         <h1 className="heading-xl mb-4">{t('cookies.title')}</h1>
       </section>

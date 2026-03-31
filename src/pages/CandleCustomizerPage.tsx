@@ -3,6 +3,7 @@ import { Layout } from "@/components/Layout";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { motion } from "framer-motion";
 import { Flame, Sparkles, Calculator, ChevronRight, MessageCircle } from "lucide-react";
+import { scentImageMap } from "@/lib/scentImages";
 
 const SIZES = [
   { id: '150', ml: 150, basePrice: 14.90 },
@@ -96,16 +97,19 @@ export default function CandleCustomizerPage() {
                   <span className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</span>
                   {t('customizer.step.scent')}
                 </h3>
-                <div className="grid grid-cols-3 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {SCENTS.map(s => (
                     <button
                       key={s}
                       onClick={() => setScent(s)}
-                      className={`p-3 rounded-lg border text-center transition-all ${
+                      className={`p-2 rounded-lg border text-center transition-all overflow-hidden ${
                         scent === s ? 'border-primary bg-primary/5 shadow-sm' : 'border-border hover:border-primary/40'
                       }`}
                     >
-                      <span className="text-sm font-medium">{t(`scents.${s}.name`)}</span>
+                      <div className="aspect-square rounded-md overflow-hidden mb-2 bg-muted">
+                        <img src={scentImageMap[s]} alt={t(`scents.${s}.name`)} className="w-full h-full object-cover" loading="lazy" width={1024} height={1024} />
+                      </div>
+                      <span className="text-sm font-medium leading-tight block">{t(`scents.${s}.name`)}</span>
                     </button>
                   ))}
                 </div>
@@ -157,6 +161,9 @@ export default function CandleCustomizerPage() {
               {/* Visual Preview */}
               <div className="rounded-xl border border-border bg-card p-8">
                 <h3 className="font-heading text-lg font-semibold mb-6 text-center">{t('customizer.preview')}</h3>
+                <div className="aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-muted">
+                  <img src={scentImageMap[scent]} alt={t(`scents.${scent}.name`)} className="w-full h-full object-cover" loading="lazy" width={1024} height={768} />
+                </div>
                 <div className="flex justify-center mb-6">
                   <div className={`relative rounded-lg bg-muted flex items-end justify-center ${
                     size === '150' ? 'w-24 h-28' : size === '250' ? 'w-28 h-36' : 'w-32 h-44'

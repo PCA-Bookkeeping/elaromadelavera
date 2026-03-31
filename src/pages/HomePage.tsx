@@ -4,15 +4,12 @@ import { Leaf, Flower2, Hand, MapPin, ChevronRight, Star, Shield, CreditCard, Pa
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { SEOHead, organizationSchema, localBusinessSchema } from "@/components/SEOHead";
+import { scentImageMap } from "@/lib/scentImages";
 import heroImage from "@/assets/hero-candle.jpg";
 import collectionHogar from "@/assets/collection-hogar.jpg";
 import collectionRegalo from "@/assets/collection-regalo.jpg";
 import collectionB2b from "@/assets/collection-b2b.jpg";
 import aboutWorkshop from "@/assets/about-workshop.jpg";
-import scentLavanda from "@/assets/scent-lavanda.jpg";
-import scentRomero from "@/assets/scent-romero.jpg";
-import scentAzahar from "@/assets/scent-azahar.jpg";
-import scentJara from "@/assets/scent-jara.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -47,14 +44,11 @@ export default function HomePage() {
   ];
 
   const scentKeys = ['lavanda', 'cafe', 'chocolate', 'romero', 'azahar', 'jara', 'canela', 'naranja', 'eucalipto', 'limon', 'vainilla', 'menta', 'coco', 'fresa', 'frutos'] as const;
-  const scentImages: Record<string, string> = {
-    lavanda: scentLavanda, romero: scentRomero, azahar: scentAzahar, jara: scentJara,
-  };
   const scents = scentKeys.map(key => ({
     key,
     name: t(`scents.${key}.name`),
     desc: t(`scents.${key}.desc`),
-    image: scentImages[key] || null,
+    image: scentImageMap[key] || null,
   }));
 
   const steps = [
@@ -299,7 +293,7 @@ export default function HomePage() {
           <h2 className="heading-lg mb-2">{t('instagram.title')}</h2>
           <p className="text-muted-foreground mb-8">@elaromadelavera</p>
           <div className="grid grid-cols-3 md:grid-cols-6 gap-2 max-w-3xl mx-auto mb-6">
-            {[scentLavanda, scentRomero, scentAzahar, scentJara, collectionHogar, collectionRegalo].map((img, i) => (
+            {[scentImageMap.lavanda, scentImageMap.romero, scentImageMap.azahar, scentImageMap.jara, collectionHogar, collectionRegalo].map((img, i) => (
               <div key={i} className="aspect-square rounded-md overflow-hidden">
                 <img src={img} alt="Instagram El Aroma de la Vera" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
               </div>
