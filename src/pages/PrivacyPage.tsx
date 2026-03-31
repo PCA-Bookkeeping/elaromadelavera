@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Language } from "@/i18n/translations";
 
@@ -37,6 +38,7 @@ export default function PrivacyPage() {
   const { t, language } = useLanguage();
   return (
     <Layout>
+      <SEOHead title={t('privacy.title')} description="Cómo tratamos, conservamos y protegemos tus datos personales." canonicalPath="/privacidad" />
       <section className="gradient-gold section-padding text-center">
         <h1 className="heading-xl mb-4">{t('privacy.title')}</h1>
       </section>

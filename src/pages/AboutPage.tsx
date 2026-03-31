@@ -2,10 +2,12 @@ import { Layout } from "@/components/Layout";
 import { Leaf, Eye, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEOHead } from "@/components/SEOHead";
 import aboutLandscape from "@/assets/about-landscape.jpg";
 import aboutIngredients from "@/assets/about-ingredients.jpg";
 import aboutHandmade from "@/assets/about-handmade.jpg";
 import aboutAromas from "@/assets/about-aromas.jpg";
+import founderFabian from "@/assets/founder-fabian.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -30,6 +32,7 @@ export default function AboutPage() {
 
   return (
     <Layout>
+      <SEOHead title={t('about.heroTitle')} description={t('about.block1.text')} canonicalPath="/sobre-nosotros" />
       <section className="gradient-gold section-padding text-center">
         <h1 className="heading-xl mb-4">{t('about.heroTitle')}</h1>
         <p className="text-accent-handwritten">{t('about.heroTagline')}</p>
@@ -57,7 +60,9 @@ export default function AboutPage() {
 
       <section className="section-padding bg-muted/50">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="aspect-square bg-muted rounded-lg flex items-center justify-center text-6xl opacity-30 max-w-sm mx-auto md:mx-0">👤</div>
+          <div className="aspect-square max-w-sm mx-auto md:mx-0 rounded-lg overflow-hidden border border-border bg-card">
+            <img src={founderFabian} alt="Fabian, fundador de El Aroma de la Vera" className="w-full h-full object-cover" loading="lazy" />
+          </div>
           <div>
             <h2 className="heading-md mb-4">{t('about.founder.title')}</h2>
             <p className="text-muted-foreground leading-relaxed">{t('about.founder.text')}</p>

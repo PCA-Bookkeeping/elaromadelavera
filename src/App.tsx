@@ -13,6 +13,7 @@ import AboutPage from "./pages/AboutPage";
 import B2BPage from "./pages/B2BPage";
 import FAQPage from "./pages/FAQPage";
 import BlogPage from "./pages/BlogPage";
+import BlogArticlePage from "./pages/BlogArticlePage";
 import ContactPage from "./pages/ContactPage";
 import ShippingPage from "./pages/ShippingPage";
 import ReturnsPage from "./pages/ReturnsPage";
@@ -36,6 +37,7 @@ function AppContent() {
       <Route path="/b2b" element={<B2BPage />} />
       <Route path="/faq" element={<FAQPage />} />
       <Route path="/blog" element={<BlogPage />} />
+      <Route path="/blog/:slug" element={<BlogArticlePage />} />
       <Route path="/contacto" element={<ContactPage />} />
       <Route path="/envios" element={<ShippingPage />} />
       <Route path="/devoluciones" element={<ReturnsPage />} />

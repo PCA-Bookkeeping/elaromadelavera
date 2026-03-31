@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Language } from "@/i18n/translations";
 
@@ -16,6 +17,7 @@ export default function LegalNoticePage() {
   const { t, language } = useLanguage();
   return (
     <Layout>
+      <SEOHead title={t('legal.title')} description="Datos identificativos y actividad legal de El Aroma de la Vera." canonicalPath="/aviso-legal" />
       <section className="gradient-gold section-padding text-center">
         <h1 className="heading-xl mb-4">{t('legal.title')}</h1>
       </section>

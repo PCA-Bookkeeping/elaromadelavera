@@ -22,7 +22,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-xl font-heading font-bold text-primary">🌿</span>
+          <img src="/brand-logo.png" alt="El Aroma de la Vera" className="h-10 w-10 rounded-full object-cover border border-border bg-background" />
           <span className="font-heading text-xl md:text-2xl font-semibold text-foreground">
             El Aroma de la Vera
           </span>
