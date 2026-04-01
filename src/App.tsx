@@ -22,6 +22,7 @@ import CookiesPage from "./pages/CookiesPage";
 import TermsPage from "./pages/TermsPage";
 import LegalNoticePage from "./pages/LegalNoticePage";
 import CandleCustomizerPage from "./pages/CandleCustomizerPage";
+import CampaignLandingPage from "./pages/CampaignLandingPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 const queryClient = new QueryClient();
