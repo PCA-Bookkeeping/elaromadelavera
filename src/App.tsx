@@ -47,6 +47,7 @@ function AppContent() {
       <Route path="/terminos" element={<TermsPage />} />
       <Route path="/aviso-legal" element={<LegalNoticePage />} />
       <Route path="/personalizar" element={<CandleCustomizerPage />} />
+      <Route path="/campana" element={<CampaignLandingPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
