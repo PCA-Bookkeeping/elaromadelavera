@@ -95,6 +95,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-primary-foreground/80">
+            <span>{t('hero.badge.vegan')}</span>
             <span>{t('hero.badge.natural')}</span>
             <span>{t('hero.badge.handmade')}</span>
             <span>{t('hero.badge.location')}</span>
