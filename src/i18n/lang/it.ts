@@ -304,6 +304,18 @@ export const it: Record<string, string> = {
   'customizer.events.contact': 'Contatta per Ordine Evento',
   'customizer.minOrder': 'Ordine minimo per personalizzate: 10 unità',
 
+  'badge.vegan': '100% Vegana',
+  'badge.crueltyFree': 'Cruelty-Free',
+  'hero.badge.vegan': '🌱 100% Vegana',
+  'usp.vegan.title': '100% Vegana',
+  'usp.vegan.desc': 'Nessun ingrediente di origine animale. Adatta a uno stile di vita vegano.',
+  'popup.title': '10% sul tuo primo ordine!',
+  'popup.desc': 'Iscriviti e ricevi un codice sconto esclusivo. Accesso anticipato alle edizioni limitate.',
+  'popup.vegan': '100% Vegana · Cruelty-Free · Naturale',
+  'popup.cta': 'Voglio il Mio Sconto',
+  'popup.thanks.title': 'Grazie!',
+  'popup.thanks.desc': 'Controlla la tua email per il codice sconto del 10%.',
+
   'cookie.title': '🍪 Usiamo i cookie',
   'cookie.text': 'Utilizziamo i cookie per migliorare la tua esperienza. Solo cookie essenziali per il funzionamento del sito.',
   'cookie.link': 'Politica dei Cookie',

@@ -304,6 +304,18 @@ export const nl: Record<string, string> = {
   'customizer.events.contact': 'Contact voor Evenement Bestelling',
   'customizer.minOrder': 'Minimale bestelling voor gepersonaliseerd: 10 stuks',
 
+  'badge.vegan': '100% Veganistisch',
+  'badge.crueltyFree': 'Dierproefvrij',
+  'hero.badge.vegan': '🌱 100% Veganistisch',
+  'usp.vegan.title': '100% Veganistisch',
+  'usp.vegan.desc': 'Geen dierlijke ingrediënten. Geschikt voor een veganistische levensstijl.',
+  'popup.title': '10% op je eerste bestelling!',
+  'popup.desc': 'Schrijf je in en ontvang een exclusieve kortingscode. Plus vroege toegang tot gelimiteerde edities.',
+  'popup.vegan': '100% Veganistisch · Dierproefvrij · Natuurlijk',
+  'popup.cta': 'Mijn Korting Ontvangen',
+  'popup.thanks.title': 'Bedankt!',
+  'popup.thanks.desc': 'Controleer je e-mail voor je 10% kortingscode.',
+
   'cookie.title': '🍪 Wij gebruiken cookies',
   'cookie.text': 'Wij gebruiken cookies om je ervaring te verbeteren. Alleen essentiële cookies voor de werking van de site.',
   'cookie.link': 'Cookiebeleid',
