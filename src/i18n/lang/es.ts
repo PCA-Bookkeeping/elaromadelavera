@@ -156,7 +156,17 @@ export const es: Record<string, string> = {
 
   // Reviews
   'reviews.title': 'Lo Que Dicen Nuestros Clientes',
+  'reviews.subtitle': 'Estamos preparando nuestras primeras velas con mucho cariño. Pronto compartiremos aquí las experiencias de quienes las reciban.',
   'reviews.placeholder': 'Pronto compartiremos las opiniones de nuestros primeros clientes.',
+  'reviews.comingSoonQuote': '«Estamos ultimando cada detalle para que tu primera vela sea perfecta. ¿Serás de los primeros en contarnos tu experiencia?»',
+  'reviews.beFirst': '✨ Sé de los primeros en descubrir nuestras velas',
+  'reviews.slotEmpty': 'Tu opinión aquí pronto',
+
+  // Social Proof Counters
+  'social.scents': 'Aromas únicos',
+  'social.sizes': 'Tamaños disponibles',
+  'social.natural': 'Ingredientes naturales',
+  'social.origin': 'Hecho a mano',
 
   // Instagram
   'instagram.title': 'Síguenos en Instagram',
