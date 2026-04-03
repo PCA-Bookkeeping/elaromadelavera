@@ -25,7 +25,7 @@ export default function HomePage() {
   const { t } = useLanguage();
 
   const usps = [
-    { icon: Leaf, title: t('usp.soy.title'), desc: t('usp.soy.desc') },
+    { icon: Leaf, title: t('usp.vegan.title'), desc: t('usp.vegan.desc') },
     { icon: Flower2, title: t('usp.oils.title'), desc: t('usp.oils.desc') },
     { icon: Hand, title: t('usp.handmade.title'), desc: t('usp.handmade.desc') },
     { icon: MapPin, title: t('usp.location.title'), desc: t('usp.location.desc') },

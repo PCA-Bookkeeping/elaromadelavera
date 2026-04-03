@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { CookieConsent } from "./CookieConsent";
+import { EmailCapturePopup } from "./EmailCapturePopup";
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
@@ -14,6 +15,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <Footer />
       <WhatsAppButton />
       <CookieConsent />
+      <EmailCapturePopup />
     </div>
   );
 }
