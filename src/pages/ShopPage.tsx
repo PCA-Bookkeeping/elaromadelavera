@@ -92,6 +92,11 @@ export default function ShopPage() {
                       </div>
                     </Link>
                     <div className="p-5">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-[10px] font-semibold px-2 py-0.5 rounded-full">
+                          <Leaf className="h-2.5 w-2.5" /> {t('badge.vegan')}
+                        </span>
+                      </div>
                       <Link to={`/producto/${product.node.handle}`}>
                         <h3 className="font-heading text-lg font-semibold mb-1 group-hover:text-primary transition-colors">{product.node.title}</h3>
                       </Link>
