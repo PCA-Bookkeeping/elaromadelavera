@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Leaf, Flower2, Hand, MapPin, ChevronRight, Star, Shield, CreditCard, Package, RotateCcw, Sparkles, Flame, Eye } from "lucide-react";
+import { VeganBadge } from "@/components/VeganBadge";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { SEOHead, organizationSchema, localBusinessSchema } from "@/components/SEOHead";
