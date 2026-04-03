@@ -270,19 +270,56 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      {/* Reviews */}
+      {/* Social Proof — Activity Counter */}
+      <section className="py-10 px-4 bg-primary/5 border-y border-primary/10">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { value: "15", label: t('social.scents') },
+              { value: "3", label: t('social.sizes') },
+              { value: "100%", label: t('social.natural') },
+              { value: "La Vera", label: t('social.origin') },
+            ].map((stat) => (
+              <motion.div key={stat.label} variants={fadeUp} className="p-4">
+                <p className="font-heading text-3xl md:text-4xl font-bold text-primary mb-1">{stat.value}</p>
+                <p className="text-xs text-muted-foreground">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials — Ready for real reviews */}
       <section className="section-padding">
         <div className="container mx-auto">
-          <h2 className="heading-lg text-center mb-12">{t('reviews.title')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="heading-lg text-center mb-4">{t('reviews.title')}</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">{t('reviews.subtitle')}</p>
+
+          {/* Featured testimonial slot — fill with first real review */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <motion.div
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+              className="p-8 rounded-2xl bg-card border border-border text-center relative overflow-hidden"
+            >
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20" />
+              <Sparkles className="h-8 w-8 mx-auto mb-4 text-primary/30" />
+              <p className="text-lg text-muted-foreground italic leading-relaxed mb-4">
+                {t('reviews.comingSoonQuote')}
+              </p>
+              <p className="text-sm font-medium text-primary">{t('reviews.beFirst')}</p>
+            </motion.div>
+          </div>
+
+          {/* Grid slots for future reviews */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="p-6 rounded-lg border border-border text-center">
-                <div className="flex justify-center gap-1 mb-4">
+              <div key={i} className="p-6 rounded-xl border border-dashed border-border/60 bg-muted/20 text-center opacity-50">
+                <div className="flex justify-center gap-1 mb-3">
                   {[1, 2, 3, 4, 5].map((s) => (
-                    <Star key={s} className="h-4 w-4 text-border" />
+                    <Star key={s} className="h-3.5 w-3.5 text-border" />
                   ))}
                 </div>
-                <p className="text-sm text-muted-foreground italic">{t('reviews.placeholder')}</p>
+                <p className="text-xs text-muted-foreground">{t('reviews.slotEmpty')}</p>
               </div>
             ))}
           </div>
