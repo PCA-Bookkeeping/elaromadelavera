@@ -304,6 +304,18 @@ export const de: Record<string, string> = {
   'customizer.events.contact': 'Kontakt für Event-Bestellung',
   'customizer.minOrder': 'Mindestbestellung für personalisierte Kerzen: 10 Stück',
 
+  'badge.vegan': '100% Vegan',
+  'badge.crueltyFree': 'Tierversuchsfrei',
+  'hero.badge.vegan': '🌱 100% Vegan',
+  'usp.vegan.title': '100% Vegan',
+  'usp.vegan.desc': 'Keine tierischen Inhaltsstoffe. Geeignet für einen veganen Lebensstil.',
+  'popup.title': '10% auf deine erste Bestellung!',
+  'popup.desc': 'Abonniere und erhalte einen exklusiven Rabattcode. Plus frühzeitigen Zugang zu limitierten Editionen.',
+  'popup.vegan': '100% Vegan · Tierversuchsfrei · Natürlich',
+  'popup.cta': 'Rabatt sichern',
+  'popup.thanks.title': 'Danke!',
+  'popup.thanks.desc': 'Prüfe deine E-Mail für deinen 10%-Rabattcode.',
+
   'cookie.title': '🍪 Wir verwenden Cookies',
   'cookie.text': 'Wir verwenden Cookies, um dein Erlebnis zu verbessern. Nur essenzielle Cookies für die Funktionalität.',
   'cookie.link': 'Cookie-Richtlinie',

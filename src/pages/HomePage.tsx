@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Leaf, Flower2, Hand, MapPin, ChevronRight, Star, Shield, CreditCard, Package, RotateCcw, Sparkles, Flame, Eye } from "lucide-react";
+import { VeganBadge } from "@/components/VeganBadge";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { SEOHead, organizationSchema, localBusinessSchema } from "@/components/SEOHead";
@@ -24,7 +25,7 @@ export default function HomePage() {
   const { t } = useLanguage();
 
   const usps = [
-    { icon: Leaf, title: t('usp.soy.title'), desc: t('usp.soy.desc') },
+    { icon: Leaf, title: t('usp.vegan.title'), desc: t('usp.vegan.desc') },
     { icon: Flower2, title: t('usp.oils.title'), desc: t('usp.oils.desc') },
     { icon: Hand, title: t('usp.handmade.title'), desc: t('usp.handmade.desc') },
     { icon: MapPin, title: t('usp.location.title'), desc: t('usp.location.desc') },
@@ -94,6 +95,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-primary-foreground/80">
+            <span>{t('hero.badge.vegan')}</span>
             <span>{t('hero.badge.natural')}</span>
             <span>{t('hero.badge.handmade')}</span>
             <span>{t('hero.badge.location')}</span>

@@ -304,6 +304,21 @@ export const en: Record<string, string> = {
   'customizer.events.contact': 'Contact for Event Order',
   'customizer.minOrder': 'Minimum order for custom candles: 10 units',
 
+  // Vegan & Badges
+  'badge.vegan': '100% Vegan',
+  'badge.crueltyFree': 'Cruelty-Free',
+  'hero.badge.vegan': '🌱 100% Vegan',
+  'usp.vegan.title': '100% Vegan',
+  'usp.vegan.desc': 'No animal-derived ingredients. Suitable for a vegan lifestyle.',
+
+  // Email Popup
+  'popup.title': '10% off your first order!',
+  'popup.desc': 'Subscribe and receive an exclusive discount code. Plus, early access to limited editions.',
+  'popup.vegan': '100% Vegan · Cruelty-Free · Natural',
+  'popup.cta': 'Get My Discount',
+  'popup.thanks.title': 'Thank you!',
+  'popup.thanks.desc': 'Check your email for your 10% discount code.',
+
   'cookie.title': '🍪 We use cookies',
   'cookie.text': 'We use cookies to improve your experience. Only essential cookies for site functionality.',
   'cookie.link': 'Cookie Policy',

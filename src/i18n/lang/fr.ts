@@ -304,6 +304,18 @@ export const fr: Record<string, string> = {
   'customizer.events.contact': 'Contact pour Commande Événement',
   'customizer.minOrder': 'Commande minimum pour bougies personnalisées : 10 unités',
 
+  'badge.vegan': '100% Végane',
+  'badge.crueltyFree': 'Cruelty-Free',
+  'hero.badge.vegan': '🌱 100% Végane',
+  'usp.vegan.title': '100% Végane',
+  'usp.vegan.desc': 'Sans ingrédients d\'origine animale. Compatible avec un mode de vie végan.',
+  'popup.title': '10% sur votre première commande !',
+  'popup.desc': 'Inscrivez-vous et recevez un code de réduction exclusif. Accès anticipé aux éditions limitées.',
+  'popup.vegan': '100% Végane · Cruelty-Free · Naturelle',
+  'popup.cta': 'Obtenir Ma Réduction',
+  'popup.thanks.title': 'Merci !',
+  'popup.thanks.desc': 'Vérifiez votre e-mail pour votre code de réduction de 10%.',
+
   'cookie.title': '🍪 Nous utilisons des cookies',
   'cookie.text': 'Nous utilisons des cookies pour améliorer votre expérience. Uniquement les cookies essentiels.',
   'cookie.link': 'Politique de Cookies',

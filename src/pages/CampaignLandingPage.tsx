@@ -216,6 +216,10 @@ export default function CampaignLandingPage() {
           </div>
           <div className="flex items-center gap-2">
             <Leaf className="h-4 w-4 text-primary" />
+            <span className="text-muted-foreground font-bold">{t("badge.vegan")}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Leaf className="h-4 w-4 text-primary" />
             <span className="text-muted-foreground">{t("campaign.social.natural")}</span>
           </div>
           <div className="flex items-center gap-2">
