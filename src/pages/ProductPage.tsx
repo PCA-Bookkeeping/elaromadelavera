@@ -70,12 +70,18 @@ export default function ProductPage() {
         title={product.title}
         description={product.description}
         canonicalPath={`/producto/${product.handle}`}
+        breadcrumbs={[
+          { name: "Inicio", path: "/" },
+          { name: "Tienda", path: "/tienda" },
+          { name: product.title, path: `/producto/${product.handle}` },
+        ]}
         jsonLd={productSchema({
           name: product.title,
           description: product.description,
           price: variant?.price.amount || '0',
           image: images[0]?.node.url,
           url: `https://elaromadelavera.lovable.app/producto/${product.handle}`,
+          sku: product.handle,
         })}
       />
       <section className="section-padding">
