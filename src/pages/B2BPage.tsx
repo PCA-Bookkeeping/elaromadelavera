@@ -44,7 +44,7 @@ export default function B2BPage() {
         description="Velas artesanales personalizadas para hoteles, restaurantes, tiendas y eventos. Pedidos desde 10 unidades con tu marca."
         canonicalPath="/b2b"
         breadcrumbs={[{ name: "Inicio", path: "/" }, { name: "B2B", path: "/b2b" }]}
-      />
+      <section className="gradient-gold section-padding text-center">
         <h1 className="heading-xl mb-4">{t('b2b.title')}</h1>
         <p className="text-lg text-muted-foreground">{t('b2b.subtitle')}</p>
       </section>
