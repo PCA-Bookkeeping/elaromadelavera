@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { Layout } from "@/components/Layout";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEOHead } from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { Flame, Sparkles, Calculator, ChevronRight, MessageCircle } from "lucide-react";
 import { scentImageMap } from "@/lib/scentImages";
@@ -56,6 +57,12 @@ export default function CandleCustomizerPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title={t('customizer.title')}
+        description="Personaliza tu vela artesanal: elige tamaño, aroma, etiqueta y texto personalizado. Calculadora para eventos incluida."
+        canonicalPath="/personalizar"
+        breadcrumbs={[{ name: "Inicio", path: "/" }, { name: "Personalizar", path: "/personalizar" }]}
+      />
       <section className="section-padding">
         <div className="container mx-auto max-w-5xl">
           <motion.div initial="hidden" animate="visible" variants={fadeUp} className="text-center mb-12">

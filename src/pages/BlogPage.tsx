@@ -34,7 +34,7 @@ export default function BlogPage() {
 
   return (
     <Layout>
-      <SEOHead title={t('blog.title')} description={t('blog.subtitle')} canonicalPath="/blog" />
+      <SEOHead title={t('blog.title')} description={t('blog.subtitle')} canonicalPath="/blog" breadcrumbs={[{ name: "Inicio", path: "/" }, { name: "Blog", path: "/blog" }]} />
       <section className="gradient-gold section-padding text-center">
         <h1 className="heading-xl mb-4">{t('blog.title')}</h1>
         <p className="text-muted-foreground">{t('blog.subtitle')}</p>

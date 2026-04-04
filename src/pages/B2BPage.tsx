@@ -3,6 +3,7 @@ import { Layout } from "@/components/Layout";
 import { Building2, Palette, MapPin, Truck, Hotel, UtensilsCrossed, Gift, Heart } from "lucide-react";
 import { toast } from "sonner";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function B2BPage() {
   const { t } = useLanguage();
@@ -38,6 +39,12 @@ export default function B2BPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title={t('b2b.title')}
+        description="Velas artesanales personalizadas para hoteles, restaurantes, tiendas y eventos. Pedidos desde 10 unidades con tu marca."
+        canonicalPath="/b2b"
+        breadcrumbs={[{ name: "Inicio", path: "/" }, { name: "B2B", path: "/b2b" }]}
+      />
       <section className="gradient-gold section-padding text-center">
         <h1 className="heading-xl mb-4">{t('b2b.title')}</h1>
         <p className="text-lg text-muted-foreground">{t('b2b.subtitle')}</p>

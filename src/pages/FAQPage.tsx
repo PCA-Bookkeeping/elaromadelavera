@@ -1,14 +1,24 @@
+import { useMemo } from "react";
 import { Layout } from "@/components/Layout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { faqTranslations } from "@/i18n/translations";
+import { SEOHead, faqSchema } from "@/components/SEOHead";
 
 export default function FAQPage() {
   const { t, language } = useLanguage();
   const sections = faqTranslations[language];
+  const allFaqItems = useMemo(() => sections.flatMap(s => s.items), [sections]);
 
   return (
     <Layout>
+      <SEOHead
+        title={t('faq.title')}
+        description="Preguntas frecuentes sobre nuestras velas artesanales de cera de soja: ingredientes, envíos, pagos, devoluciones y pedidos B2B."
+        canonicalPath="/faq"
+        jsonLd={faqSchema(allFaqItems)}
+        breadcrumbs={[{ name: "Inicio", path: "/" }, { name: "FAQ", path: "/faq" }]}
+      />
       <section className="gradient-gold section-padding text-center">
         <h1 className="heading-xl mb-4">{t('faq.title')}</h1>
         <p className="text-muted-foreground">{t('faq.subtitle')}</p>

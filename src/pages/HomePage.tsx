@@ -4,7 +4,7 @@ import { Leaf, Flower2, Hand, MapPin, ChevronRight, Star, Shield, CreditCard, Pa
 import { VeganBadge } from "@/components/VeganBadge";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { SEOHead, organizationSchema, localBusinessSchema } from "@/components/SEOHead";
+import { SEOHead, organizationSchema, localBusinessSchema, websiteSchema } from "@/components/SEOHead";
 import { scentImageMap } from "@/lib/scentImages";
 import heroImage from "@/assets/hero-candle.jpg";
 import collectionHogar from "@/assets/collection-hogar.jpg";
@@ -71,7 +71,8 @@ export default function HomePage() {
         title={t('hero.title')}
         description={t('hero.subtitle')}
         canonicalPath="/"
-        jsonLd={{ ...organizationSchema, ...localBusinessSchema }}
+        jsonLd={[organizationSchema, localBusinessSchema, websiteSchema]}
+        breadcrumbs={[{ name: "Inicio", path: "/" }]}
       />
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
