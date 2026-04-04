@@ -4,7 +4,7 @@ import { Leaf, Flower2, Hand, MapPin, ChevronRight, Star, Shield, CreditCard, Pa
 import { VeganBadge } from "@/components/VeganBadge";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { SEOHead, organizationSchema, localBusinessSchema } from "@/components/SEOHead";
+import { SEOHead, organizationSchema, localBusinessSchema, websiteSchema } from "@/components/SEOHead";
 import { scentImageMap } from "@/lib/scentImages";
 import heroImage from "@/assets/hero-candle.jpg";
 import collectionHogar from "@/assets/collection-hogar.jpg";
