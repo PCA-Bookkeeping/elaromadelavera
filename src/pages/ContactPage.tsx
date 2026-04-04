@@ -3,6 +3,7 @@ import { Layout } from "@/components/Layout";
 import { MapPin, Clock, Mail, Phone } from "lucide-react";
 import { toast } from "sonner";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function ContactPage() {
   const { t } = useLanguage();
