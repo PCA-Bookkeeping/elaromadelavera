@@ -16,6 +16,12 @@ export default function ContactPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title={t('contact.title')}
+        description="Contacta con El Aroma de la Vera. Estamos en Jarandilla de la Vera, Extremadura. WhatsApp, email o formulario."
+        canonicalPath="/contacto"
+        breadcrumbs={[{ name: "Inicio", path: "/" }, { name: "Contacto", path: "/contacto" }]}
+      />
       <section className="gradient-gold section-padding text-center">
         <h1 className="heading-xl mb-4">{t('contact.title')}</h1>
         <p className="text-muted-foreground">{t('contact.subtitle')}</p>

@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { Layout } from "@/components/Layout";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEOHead } from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { Flame, Sparkles, Calculator, ChevronRight, MessageCircle } from "lucide-react";
 import { scentImageMap } from "@/lib/scentImages";
