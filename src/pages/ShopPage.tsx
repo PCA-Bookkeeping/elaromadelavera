@@ -42,7 +42,7 @@ export default function ShopPage() {
 
   return (
     <Layout>
-      <SEOHead title={t('shop.title')} description={t('shop.subtitle')} canonicalPath="/tienda" />
+      <SEOHead title={t('shop.title')} description={t('shop.subtitle')} canonicalPath="/tienda" breadcrumbs={[{ name: "Inicio", path: "/" }, { name: "Tienda", path: "/tienda" }]} />
       <section className="section-padding">
         <div className="container mx-auto">
           <h1 className="heading-xl text-center mb-4">{t('shop.title')}</h1>

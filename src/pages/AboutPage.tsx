@@ -32,7 +32,7 @@ export default function AboutPage() {
 
   return (
     <Layout>
-      <SEOHead title={t('about.heroTitle')} description={t('about.block1.text')} canonicalPath="/sobre-nosotros" />
+      <SEOHead title={t('about.heroTitle')} description={t('about.block1.text')} canonicalPath="/sobre-nosotros" breadcrumbs={[{ name: "Inicio", path: "/" }, { name: "Sobre Nosotros", path: "/sobre-nosotros" }]} />
       <section className="gradient-gold section-padding text-center">
         <h1 className="heading-xl mb-4">{t('about.heroTitle')}</h1>
         <p className="text-accent-handwritten">{t('about.heroTagline')}</p>
