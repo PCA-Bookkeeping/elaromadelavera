@@ -3,6 +3,7 @@ import { Layout } from "@/components/Layout";
 import { Building2, Palette, MapPin, Truck, Hotel, UtensilsCrossed, Gift, Heart } from "lucide-react";
 import { toast } from "sonner";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function B2BPage() {
   const { t } = useLanguage();

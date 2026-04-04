@@ -71,7 +71,8 @@ export default function HomePage() {
         title={t('hero.title')}
         description={t('hero.subtitle')}
         canonicalPath="/"
-        jsonLd={{ ...organizationSchema, ...localBusinessSchema }}
+        jsonLd={[organizationSchema, localBusinessSchema, websiteSchema]}
+        breadcrumbs={[{ name: "Inicio", path: "/" }]}
       />
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
