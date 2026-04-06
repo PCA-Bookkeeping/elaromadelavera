@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useCartSync } from "@/hooks/useCartSync";
 import { LanguageProvider } from "@/i18n/LanguageContext";
+import { Analytics } from "@/components/Analytics";
 import { Loader2 } from "lucide-react";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -25,6 +26,7 @@ const TermsPage = lazy(() => import("./pages/TermsPage"));
 const LegalNoticePage = lazy(() => import("./pages/LegalNoticePage"));
 const CandleCustomizerPage = lazy(() => import("./pages/CandleCustomizerPage"));
 const CampaignLandingPage = lazy(() => import("./pages/CampaignLandingPage"));
+const PreLaunchPage = lazy(() => import("./pages/PreLaunchPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 const queryClient = new QueryClient();
