@@ -35,28 +35,32 @@ function AppContent() {
   useCartSync();
   const fallback = <div className="flex justify-center py-32"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>;
   return (
-    <Suspense fallback={fallback}>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/tienda" element={<ShopPage />} />
-        <Route path="/producto/:handle" element={<ProductPage />} />
-        <Route path="/sobre-nosotros" element={<AboutPage />} />
-        <Route path="/b2b" element={<B2BPage />} />
-        <Route path="/faq" element={<FAQPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:slug" element={<BlogArticlePage />} />
-        <Route path="/contacto" element={<ContactPage />} />
-        <Route path="/envios" element={<ShippingPage />} />
-        <Route path="/devoluciones" element={<ReturnsPage />} />
-        <Route path="/privacidad" element={<PrivacyPage />} />
-        <Route path="/cookies" element={<CookiesPage />} />
-        <Route path="/terminos" element={<TermsPage />} />
-        <Route path="/aviso-legal" element={<LegalNoticePage />} />
-        <Route path="/personalizar" element={<CandleCustomizerPage />} />
-        <Route path="/campana" element={<CampaignLandingPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </Suspense>
+    <>
+      <Analytics />
+      <Suspense fallback={fallback}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/tienda" element={<ShopPage />} />
+          <Route path="/producto/:handle" element={<ProductPage />} />
+          <Route path="/sobre-nosotros" element={<AboutPage />} />
+          <Route path="/b2b" element={<B2BPage />} />
+          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogArticlePage />} />
+          <Route path="/contacto" element={<ContactPage />} />
+          <Route path="/envios" element={<ShippingPage />} />
+          <Route path="/devoluciones" element={<ReturnsPage />} />
+          <Route path="/privacidad" element={<PrivacyPage />} />
+          <Route path="/cookies" element={<CookiesPage />} />
+          <Route path="/terminos" element={<TermsPage />} />
+          <Route path="/aviso-legal" element={<LegalNoticePage />} />
+          <Route path="/personalizar" element={<CandleCustomizerPage />} />
+          <Route path="/campana" element={<CampaignLandingPage />} />
+          <Route path="/prelanzamiento" element={<PreLaunchPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
+    </>
   );
 }
 
